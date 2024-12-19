@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yantramanav&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.change-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .change-scrollbar::-webkit-scrollbar {
+    display: block;
+    width: 7.5px;
+  }
+  
+  .change-scrollbar::-webkit-scrollbar-track {
+    background-color: #171717;
+  }
+  
+  .change-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 1.5rem;
+    background-color: #524C4C;
+  }
+}
