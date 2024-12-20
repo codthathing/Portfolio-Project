@@ -10,6 +10,7 @@ export default {
         grey: {
           light: "#B7B7B7",
           semilight: "#3C3D37",
+          dark: "#2B2B2B",
         },
         primary: "#1D4ED8",
       },
@@ -19,6 +20,12 @@ export default {
       },   
       backdropBlur: {
         xs: "2px",
+      },
+      width: {
+        "[65%]": "65%",
+      },
+      fontSize: {
+        "[8px]": "8px",
       },
     },
   },
