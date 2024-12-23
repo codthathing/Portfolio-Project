@@ -17,7 +17,8 @@ const Footer = () => {
       { id: 0, text: "Click on the robot to expand/collapse" },
       { id: 1, text: "Welcome to my portfolio! Explore using the navigation menu" },
       { id: 2, text: "Click on the icon at the top-left to navigate to the front page" },
-    ], text: "Click on the robot to expand/collapse"
+      { id: 3, text: "Click on the email address to send an email directly" },
+    ], text: "Click on the robot to expand/collapse",
   });
 
   useEffect(() => {

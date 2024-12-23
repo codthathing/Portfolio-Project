@@ -10,7 +10,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="flex items-center justify-center h-full">
+    <main className="main-center">
       <div className="uppercase">
         <p className="font-Roboto text-gray-400 tracking-widest text-xs md:text-base lg:text-sm">hey, i'm</p>
         <h1 className="font-Yantramanav text-white text-5xl md:text-8xl lg:text-9xl my-2 md:my-4 font-extrabold">oluwasegun</h1>
