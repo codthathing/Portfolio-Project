@@ -2,7 +2,6 @@ import AboutMePage from "../../pages/AboutMePage";
 import EducationPage from "../../pages/EducationPage";
 import ExperiencePage from "../../pages/ExperiencePage";
 import SkillsPage from "../../pages/SkillsPage";
-import AchievementPage from "../../pages/AchievementPage";
 
 const ResumeLayout = ({ resumeShown }) => {
   const Layout = () => {
@@ -14,9 +13,7 @@ const ResumeLayout = ({ resumeShown }) => {
       return <ExperiencePage />;
     } else if (resumeShown === "skills") {
       return <SkillsPage />;
-    } else if (resumeShown === "achievement") {
-      return <AchievementPage />
-    };
+    }
   };
 
   return (
