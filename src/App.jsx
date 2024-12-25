@@ -3,8 +3,6 @@ import PageLayout from "./components/ui/PageLayout";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
-import SkillsPage from "./pages/SkillsPage";
-import AchievementPage from "./pages/AchievementPage";
 import ContactPage from "./pages/ContactPage";
 
 function App() {
@@ -15,8 +13,6 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/resume" element={<ResumePage />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/achievement" element={<AchievementPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>

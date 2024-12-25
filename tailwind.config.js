@@ -14,6 +14,7 @@ export default {
           semidark: "#1C1C1C",
           textdark: "#858585",
           borderdark: "#242424",
+          bgdark: "#27272C",
         },
         primary: "#1D4ED8",
       },

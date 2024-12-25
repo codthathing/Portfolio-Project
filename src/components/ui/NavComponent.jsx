@@ -14,8 +14,6 @@ const NavComponent = () => {
   const pageNavigation = [
     { id: 0, text: "projects" },
     { id: 1, text: "resume" },
-    { id: 2, text: "skills" },
-    { id: 3, text: "achievement" },
     { id: 4, text: "contact" },
   ];
 
