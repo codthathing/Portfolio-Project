@@ -22,7 +22,7 @@ const SkillsPage = () => {
         return (
           <main key={id}>
             <h1 className="text-white font-Yantramanav tracking-widest font-bold capitalize text-xl md:text-4xl lg:text-3xl">{topic}</h1>
-            <div className="flex flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-4 mt-2 md:mt-6 lg:mt-4 text-xs md:text-lg lg:text-sm">
+            <div className="flex flex-wrap gap-2 md:gap-6 lg:gap-4 mt-2 md:mt-6 lg:mt-4 text-xs md:text-lg lg:text-sm">
               {skills.map(({ id, skill }) => {
                 const stackDetails = checkStackDetails(skill);
                 return (
