@@ -1,4 +1,4 @@
-import { faCss3, faHtml5, faReact, faJava, faPython, faJs } from "@fortawesome/free-brands-svg-icons";
+import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import { SiTailwindcss } from "react-icons/si";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,6 +19,8 @@ export const checkStackDetails = (stack_name) => {
       return { icon: faJs, text: "JavaScript" };
     case "localstorage":
       return { icon: faDatabase, text: "localStorage" };
+    case "bootstrap":
+      return { icon: faBootstrap, text: "Bootstrap" };
     case "tailwind css":
       return { icon: SiTailwindcss, text: "Tailwind CSS" };
     default:

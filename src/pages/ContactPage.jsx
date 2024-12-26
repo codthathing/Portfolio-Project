@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const ContactPage = () => {
   const contactInfo = [
-    { id: 0, topic: "Address", text: "Ikorodu, Nigeria", type: "text" },
+    { id: 0, topic: "Address", text: "Lagos, Nigeria", type: "text" },
     { id: 1, topic: "Email", text: "akinwunmiolusegun277@gmail.com", type: "link" },
   ];
 
@@ -40,7 +40,7 @@ const ContactPage = () => {
               <ContactInput type={"email"} name={"email"} value={contactInput.email} onChange={handleContactInput} placeholder={"Your email"} />
               <textarea name="message" value={contactInput.message} onChange={handleContactInput} placeholder="Messaage" required className="text-gray-400 text-[8px] md:text-sm lg:text-xs py-2 lg:py-3 font-Roboto w-full border-b border-neutral-700 bg-transparent placeholder:text-gray-400 tracking-wider focus:border-neutral-500 focus:outline-none" id="" />
             </div>
-            <button type="submit" className="font-Yantramanav mt-6 md:mt-10 lg:mt-8 py-2 px-4 md:px-5 md:py-3 text-xs md:text-lg lg:text-base rounded-lg text-white bg-zinc-800 bg-opacity-30 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0">SEND MESSAGE</button>
+            <button type="button" className="font-Yantramanav mt-6 md:mt-10 lg:mt-8 py-2 px-4 md:px-5 md:py-3 text-xs md:text-lg lg:text-base rounded-lg text-white bg-zinc-800 bg-opacity-30 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0">SEND MESSAGE</button>
           </form>
         </ContactDiv>
       </main>

@@ -3,8 +3,17 @@ import { checkStackDetails } from "../utils/checkStackDetails";
 
 const SkillsPage = () => {
   const skillsDetails = [
-    { id: 0, topic: "frontend technologies", skills: [{ id: 0, skill: "html" }] },
-    { id: 1, topic: "other technologies", skills: [{ id: 0, skill: "html" }] },
+    {
+      id: 0, topic: "frontend technologies", skills: [
+        { id: 0, skill: "html" },
+        { id: 0, skill: "css" },
+        { id: 0, skill: "javascript" },
+        { id: 0, skill: "react" },
+        { id: 0, skill: "tailwind css" },
+        { id: 0, skill: "bootstrap" },
+      ]
+    },
+    { id: 1, topic: "other technologies", skills: [{ id: 0, skill: "localstorage" }] },
   ];
 
   return (

@@ -25,8 +25,8 @@ const ProjectsTemplate = ({ projectsArray }) => {
                 })}
               </div>
               <div className="flex items-center gap-x-8 md:gap-x-12 lg:gap-x-10 self-end mt-4 md:mt-6 lg:mt-4 text-xs md:text-lg lg:text-base text-white">
-                <a href={project_github} target="_blank" rel="noopener noreferrer" className="cursor-pointer"><FontAwesomeIcon icon={faGithub} /></a>
-                <a href={project_link} target="_blank" rel="noopener noreferrer" className="cursor-pointer"><FontAwesomeIcon icon={faExternalLink} /></a>
+                <a href={`https://github.com/codthathing/${project_github}`} target="_blank" rel="noopener noreferrer" className="cursor-pointer"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href={`https://${project_link}`} target="_blank" rel="noopener noreferrer" className="cursor-pointer"><FontAwesomeIcon icon={faExternalLink} /></a>
               </div>
             </section>
           </div>
