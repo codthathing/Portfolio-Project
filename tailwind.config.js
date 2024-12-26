@@ -27,9 +27,13 @@ export default {
       },
       width: {
         "[65%]": "65%",
+        "[60%]": "60%",
       },
       fontSize: {
         "[8px]": "8px",
+      },
+      translate: {
+        "[0.5px]": "0.5px",
       },
     },
   },

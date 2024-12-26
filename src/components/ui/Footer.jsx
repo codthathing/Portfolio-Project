@@ -35,7 +35,7 @@ const Footer = () => {
       <div className={`${location !== "/" ? "invisible" : ""} md:visible flex items-center gap-x-5 md:gap-x-10 lg:gap-x-7`}>
         {socialsPages.map(({ id, icon, socialsLink }) => <a key={id} target="_blank" href={socialsLink}><FontAwesomeIcon icon={icon} className="text-gray-400 text-base md:text-2xl lg:text-xl transition-all ease-linear duration-200 hover:scale-125" /></a>)}
       </div>
-      <div className={`absolute right-4 bottom-4 md:right-10 md:bottom-8 lg:right-16 lg:bottom-5 max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 ${showInformation.div ? "visible" : "invisible"} flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
+      <div className={`absolute right-4 bottom-4 md:right-10 md:bottom-8 lg:right-16 lg:bottom-5 max-w-[60%] md:max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 ${showInformation.div ? "visible" : "invisible"} flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
         <FontAwesomeIcon icon={faRobot} onClick={() => setShowInformation(prevState => ({ ...prevState, section: !prevState.section }))} className="text-sm md:text-2xl lg:text-xl cursor-pointer" />
         <section className={`${showInformation.section ? "flex" : "hidden"} ${!showInformation.section ? "md:flex" : "md:hidden"} items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
           <FontAwesomeIcon icon={faArrowRight} className="md:text-lg lg:text-base hidden md:block" />
