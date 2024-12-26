@@ -35,7 +35,7 @@ const ProjectsPage = () => {
       ]
     },
     {
-      id: 3, project_image: akinia, project_topic: "akinia app", project_github: "Akinia-app.git", project_link: "akinia.vercel.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 3, project_image: akinia, project_topic: "akinia app", project_github: "Akinia-app.git", project_link: "akinia.netlify.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
         { id: 0, stack_name: "javascript" },
         { id: 1, stack_name: "react" },
         { id: 2, stack_name: "css" },
