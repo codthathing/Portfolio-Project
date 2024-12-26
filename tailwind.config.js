@@ -33,7 +33,7 @@ export default {
         "[8px]": "8px",
       },
       translate: {
-        "[0.5px]": "0.5px",
+        "[1.5px]": "1.5px",
       },
     },
   },
