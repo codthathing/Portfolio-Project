@@ -9,11 +9,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PageLayout />}>
+        <Route exact path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="resume" element={<ResumePage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
