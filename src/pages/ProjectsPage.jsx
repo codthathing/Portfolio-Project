@@ -42,7 +42,7 @@ const ProjectsPage = () => {
       ]
     },
     {
-      id: 3, project_image: kin_website, project_topic: "kin website", project_github: "akinse-website.git", project_link: "webkin.netlify.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 4, project_image: kin_website, project_topic: "kin website", project_github: "akinse-website.git", project_link: "webkin.netlify.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
         { id: 0, stack_name: "html" },
         { id: 1, stack_name: "css" },
         { id: 2, stack_name: "javascript" },
