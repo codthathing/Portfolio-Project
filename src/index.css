@@ -731,16 +731,16 @@ video {
   width: 60%;
 }
 
-.w-4\/5{
-  width: 80%;
-}
-
 .w-6{
   width: 1.5rem;
 }
 
 .w-8{
   width: 2rem;
+}
+
+.w-\[78\.5\%\]{
+  width: 78.5%;
 }
 
 .w-fit{
@@ -1564,6 +1564,10 @@ video {
 
   .md\:w-2\/5{
     width: 40%;
+  }
+
+  .md\:w-4\/5{
+    width: 80%;
   }
 
   .md\:w-fit{
