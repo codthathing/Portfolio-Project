@@ -1,4 +1,4 @@
-import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap, faGit, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { SiTailwindcss, SiVercel, SiNetlify, SiGit } from "react-icons/si";
 import { faDatabase, faC } from "@fortawesome/free-solid-svg-icons";
 

@@ -14,7 +14,7 @@ const AboutMePage = () => {
 
   return (
     <>
-      <ResumeTopicText topic={"about me"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque rerum quas vero enim excepturi at distinctio quae neque maxime harum, tenetur voluptas asperiores magni assumenda eaque. Vel, recusandae exercitationem. Numquam veritatis error aliquam mollitia odit deleniti voluptate quod eveniet id, libero optio laudantium reiciendis? Neque qui recusandae amet, porro rem, sit ipsa perferendis ratione sed, ex libero maiores temporibus."} />
+      <ResumeTopicText topic={"about me"} text={"Hey, I'm OLUWASEGUN! a Frontend engineer interested in building amazing things in the tech world. I've learned different languages, frameworks, and tech tools, combining them together to build web applications that stand out. Being able to build real-world projects from ideas has been a fascinating experience on my tech journey so far. I've learned problem-solving and how to provide the best experience for users. I'm all about that 'yeah' moment when everything just clicks. \n\nSo, if you are looking to work with a developer that builds awesome web applications and enjoys the journey just as much as the destination, I'm your best person!"} />
       <AboutMeMain aboutArray={aboutDetails} />
     </>
   );

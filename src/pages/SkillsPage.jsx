@@ -19,13 +19,15 @@ const SkillsPage = () => {
         { id: 3, stack_name: "java" },
       ]
     },
-    { id: 2, topic: "tools & platforms", skills: [
-      { id: 0, stack_name: "localstorage" },
-      { id: 1, stack_name: "git" },
-      { id: 2, stack_name: "github" },
-      { id: 3, stack_name: "netlify" },
-      { id: 4, stack_name: "vercel" },
-    ] },
+    {
+      id: 2, topic: "tools & platforms", skills: [
+        { id: 0, stack_name: "localstorage" },
+        { id: 1, stack_name: "git" },
+        { id: 2, stack_name: "github" },
+        { id: 3, stack_name: "netlify" },
+        { id: 4, stack_name: "vercel" },
+      ]
+    },
   ];
 
   return (

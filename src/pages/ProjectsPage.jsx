@@ -12,7 +12,7 @@ import { useRenderProjects } from "../hooks/useRenderProjects";
 const ProjectsPage = () => {
   const featuredProjects = [
     {
-      id: 0, project_image: calor_stiches, project_topic: "calor stiches", project_github: "calor-stiches.git", project_link: "calorstiches.vercel.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 0, project_image: calor_stiches, project_topic: "calor stiches", project_github: "calor-stiches.git", project_link: "calorstiches.vercel.app", project_text: "Calor stiches is an e-commerce clothing website where users can browse range of stiched clothing items, and users can add their products to cart with a seamless checkout process.", project_stack: [
         { id: 0, stack_name: "javascript" },
         { id: 1, stack_name: "css" },
         { id: 2, stack_name: "react" },
@@ -20,7 +20,7 @@ const ProjectsPage = () => {
       ]
     },
     {
-      id: 1, project_image: link_hack, project_topic: "link app", project_github: "link-app-hackathon.git", project_link: "link-hack.vercel.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 1, project_image: link_hack, project_topic: "link app", project_github: "link-app-hackathon.git", project_link: "link-hack.vercel.app", project_text: "Link app provides user with the ability to add links, visit the links, and also copy the links for sharing, making it simple and convenient to manage and share their information.", project_stack: [
         { id: 0, stack_name: "react" },
         { id: 1, stack_name: "tailwind css" },
         { id: 2, stack_name: "localstorage" },
@@ -28,14 +28,14 @@ const ProjectsPage = () => {
       ]
     },
     {
-      id: 2, project_image: liveseg, project_topic: "liveseg football app", project_github: "liveseg.git", project_link: "liveseg.vercel.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 2, project_image: liveseg, project_topic: "liveseg football app", project_github: "liveseg.git", project_link: "liveseg.vercel.app", project_text: "This football streaming app is a platform that is built to provide football fans with live action of their favorite football teams and also provides additional features to enhance the fan experience.", project_stack: [
         { id: 0, stack_name: "html" },
         { id: 1, stack_name: "javascript" },
         { id: 2, stack_name: "bootstrap" },
       ]
     },
     {
-      id: 3, project_image: akinia, project_topic: "akinia app", project_github: "Akinia-app.git", project_link: "akinia.vercel.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 3, project_image: akinia, project_topic: "akinia app", project_github: "Akinia-app.git", project_link: "akinia.vercel.app", project_text: "It is an e-commerce with sections for foods, clothes, and shoes, making it easy for users to shop and manage their purchases in one place. It also provides a cart that displays each product's subtotal and total cost for all items.", project_stack: [
         { id: 0, stack_name: "javascript" },
         { id: 1, stack_name: "react" },
         { id: 2, stack_name: "css" },
@@ -43,7 +43,7 @@ const ProjectsPage = () => {
       ]
     },
     {
-      id: 4, project_image: kin_website, project_topic: "kin website", project_github: "akinse-website.git", project_link: "webkin.netlify.app", project_text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis quidem voluptates, rem sequi, officia hic, nisi maiores quisquam totam explicabo tempora dolores laborum suscipit ipsum. Culpa consequuntur itaque iure.", project_stack: [
+      id: 4, project_image: kin_website, project_topic: "kin website", project_github: "akinse-website.git", project_link: "webkin.netlify.app", project_text: "I built a website that offers services like UI/UX design, mobile and web app development, and product design. It also includes a customer review section for users to give feedbacks and experience about the quality of services provided.", project_stack: [
         { id: 0, stack_name: "html" },
         { id: 1, stack_name: "css" },
         { id: 2, stack_name: "javascript" },
@@ -61,7 +61,7 @@ const ProjectsPage = () => {
           {currentIndex && <ProjectsTemplate projectsArray={featuredProjects.slice(newPaginationIndex * currentIndex, ((newPaginationIndex * currentIndex) + currentIndex))} />}
           <ProjectsPaginationButton icon={faAngleRight} buttonFunction={changeProjectsShownNext} />
         </section>
-        {paginationLength && <ProjectsPagination paginationArray={paginationLength} presentPagination={newPaginationIndex} /> }
+        {paginationLength && <ProjectsPagination paginationArray={paginationLength} presentPagination={newPaginationIndex} />}
       </div>
     </main>
   );
