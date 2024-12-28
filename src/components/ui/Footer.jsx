@@ -15,10 +15,10 @@ const Footer = () => {
   const [informationDetails, setInformationDetails] = useState({
     array: [
       { id: 0, text: "Welcome to my portfolio!" },
-      { id: 0, text: "On mobile: Explore using the navigation menu at the top-right" },
-      { id: 1, text: "Click on the robot to expand/collapse" },
-      { id: 2, text: "Click on the icon at the top-left to navigate to the front page" },
-      { id: 3, text: "Click on the email address to send an email directly" },
+      { id: 1, text: "On mobile: Explore using the navigation menu at the top-right" },
+      { id: 2, text: "Click on the robot to expand/collapse" },
+      { id: 3, text: "Click on the icon at the top-left to navigate to the front page" },
+      { id: 4, text: "Click on the email address to send an email directly" },
     ], text: "Welcome to my portfolio!",
   });
 
