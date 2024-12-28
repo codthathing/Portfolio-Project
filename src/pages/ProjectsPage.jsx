@@ -39,6 +39,7 @@ const ProjectsPage = () => {
         { id: 0, stack_name: "javascript" },
         { id: 1, stack_name: "react" },
         { id: 2, stack_name: "css" },
+        { id: 3, stack_name: "localstorage" },
       ]
     },
     {

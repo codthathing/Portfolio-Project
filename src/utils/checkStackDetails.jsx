@@ -1,6 +1,6 @@
-import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap } from "@fortawesome/free-brands-svg-icons";
-import { SiTailwindcss } from "react-icons/si";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap, faGit, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { SiTailwindcss, SiVercel, SiNetlify, SiGit } from "react-icons/si";
+import { faDatabase, faC } from "@fortawesome/free-solid-svg-icons";
 
 export const checkStackDetails = (stack_name) => {
   const stack_name_lower = stack_name.toLowerCase();
@@ -21,8 +21,18 @@ export const checkStackDetails = (stack_name) => {
       return { icon: faDatabase, text: "localStorage" };
     case "bootstrap":
       return { icon: faBootstrap, text: "Bootstrap" };
+    case "c":
+      return { icon: faC, text: "" };
+    case "git":
+      return { icon: SiGit, text: "Git" };
+    case "github":
+      return { icon: faGithub, text: "Github" };
     case "tailwind css":
       return { icon: SiTailwindcss, text: "Tailwind CSS" };
+    case "vercel":
+      return { icon: SiVercel, text: "Vercel" };
+    case "netlify":
+      return { icon: SiNetlify, text: "Netlify" };
     default:
       break;
   };
