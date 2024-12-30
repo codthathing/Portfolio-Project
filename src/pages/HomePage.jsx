@@ -14,7 +14,7 @@ const HomePage = () => {
     <main className="main-center">
       <div className="uppercase">
         <p className="font-Roboto text-gray-400 tracking-widest text-xs md:text-base lg:text-sm">hey, i'm</p>
-        <HomeName name={"OLUWASEGUN"} className={"text-5xl md:text-8xl lg:text-9xl my-2 md:my-4"} />
+        <HomeName name={"OLUWASEGUN"} className={"my-2 md:my-4"} />
         <p className="font-Yantramanav text-gray-400 tracking-wider text-sm md:text-xl lg:text-base text-right">a frontend engineer</p>
         <div className="flex items-center justify-between mt-5 md:mt-12 lg:mt-14 text-xs md:text-base lg:text-sm">
           {fronPageLinks.map(({ id, icon, text, destination }) => {
