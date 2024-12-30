@@ -5,7 +5,7 @@ const AboutMePage = () => {
   const aboutDetails = [
     { id: 0, topic: "name", text: "Akinwunmi Oluwasegun" },
     { id: 1, topic: "phone", text: "+234 90 4344 5618" },
-    { id: 2, topic: "email", text: "akinwunmiolusegun277@gmail.com" },
+    { id: 2, topic: "email", text: "akinwunmiolusegun277@gmail.com", type: "link" },
     { id: 3, topic: "experience", text: "2+ years" },
     { id: 4, topic: "nationality", text: "Nigeria" },
     { id: 5, topic: "frontend gig / role", text: "Available" },
