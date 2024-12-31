@@ -8,7 +8,7 @@ const EducationPage = () => {
 
   return (
     <>
-      <ResumeTopicText topic={"my educational history"} text={"Committed to continuous learning, I have pursued education in computer science and other programs like Data Structures ad Algorithms to enhance my technical skills and achieve my goal of becoming a software engineer. My formal education alongside my acquired skills, equips me with the tools to excel in web development."} />
+      <ResumeTopicText topic={"my educational history"} text={"Committed to continuous learning, I have pursued education in computer science and other programs like Data Structures and Algorithms to enhance my technical skills and achieve my goal of becoming a software engineer. My formal education alongside my acquired skills, equips me with the tools to excel in web development."} />
       <EducationMain educationArray={educationDetails} />
     </>
   );
