@@ -21,9 +21,16 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<PageLayout showFooterHeader={hasSeenAnimation} />}>
-          {!hasSeenAnimation && <Route index element={<div className="flex items-center justify-center h-full">
-            <HomeName name={"HI"} />
-          </div>} />}
+          {!hasSeenAnimation && (
+            <Route
+              index
+              element={
+                <div className="flex items-center justify-center h-full">
+                  <HomeName name={"HI"} />
+                </div>
+              }
+            />
+          )}
           <Route index element={<HomePage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="resume" element={<ResumePage />} />
@@ -32,6 +39,6 @@ function App() {
       </Routes>
     </>
   );
-};
+}
 
 export default App;
