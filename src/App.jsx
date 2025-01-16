@@ -25,7 +25,7 @@ function App() {
           <Route
             path="/"
             element={
-              <PageDiv className={"fixed items-center justify-center z-30 w-full"}>
+              <PageDiv className={"fixed items-center justify-center z-30 w-full h-full"}>
                 <HomeName name={"HI"} />
               </PageDiv>
             }
