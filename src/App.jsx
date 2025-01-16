@@ -32,14 +32,16 @@ function App() {
           />
         </Routes>
       )}
-      <Routes>
-        <Route exact path="/" element={<PageLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="resume" element={<ResumePage />} />
-          <Route path="contact" element={<ContactPage />} />
-        </Route>
-      </Routes>
+      {hasSeenAnimation && (
+        <Routes>
+          <Route exact path="/" element={<PageLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="resume" element={<ResumePage />} />
+            <Route path="contact" element={<ContactPage />} />
+          </Route>
+        </Routes>
+      )}
     </>
   );
 }
