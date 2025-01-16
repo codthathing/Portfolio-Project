@@ -20,19 +20,11 @@ function App() {
 
   return (
     <>
-      {!hasSeenAnimation && (
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <PageDiv className={"fixed items-center justify-center z-30 w-full"}>
-                <HomeName name={"HI"} />
-              </PageDiv>
-            }
-          />
-        </Routes>
-      )}
-      {hasSeenAnimation && (
+      {!hasSeenAnimation ? (
+        <PageDiv className={"items-center justify-center"}>
+          <HomeName name={"HI"} />
+        </PageDiv>
+      ) : (
         <Routes>
           <Route exact path="/" element={<PageLayout />}>
             <Route index element={<HomePage />} />
