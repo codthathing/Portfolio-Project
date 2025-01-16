@@ -1,8 +1,8 @@
 import BackgroundStyle from "./BackgroundStyle";
 
-const PageDiv = ({ children }) => {
+const PageDiv = ({ className, children }) => {
   return (
-    <div className="bg-dark-semi relative h-screen flex flex-col overflow-hidden">
+    <div className={`bg-dark-semi flex ${className}`}>
       <BackgroundStyle />
       {children}
     </div>

@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
+import PageDiv from "./components/ui/PageDiv";
 import HomeName from "./components/ui/HomeName";
 import { useEffect, useState } from "react";
 
@@ -19,18 +20,20 @@ function App() {
 
   return (
     <>
+      {!hasSeenAnimation && (
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <PageDiv className={"fixed items-center justify-center z-30 w-full h-full"}>
+                <HomeName name={"HI"} />
+              </PageDiv>
+            }
+          />
+        </Routes>
+      )}
       <Routes>
-        <Route exact path="/" element={<PageLayout showFooterHeader={hasSeenAnimation} />}>
-          {!hasSeenAnimation && (
-            <Route
-              index
-              element={
-                <div className="flex items-center justify-center h-full">
-                  <HomeName name={"HI"} />
-                </div>
-              }
-            />
-          )}
+        <Route exact path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="resume" element={<ResumePage />} />
