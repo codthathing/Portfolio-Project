@@ -2,7 +2,7 @@ import BackgroundStyle from "./BackgroundStyle";
 
 const PageDiv = ({ className, children }) => {
   return (
-    <div className={`bg-dark-semi flex h-screen ${className}`}>
+    <div className={`bg-dark-semi flex ${className}`}>
       <BackgroundStyle />
       {children}
     </div>

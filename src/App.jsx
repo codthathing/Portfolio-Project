@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       {!hasSeenAnimation ? (
-        <PageDiv className={"items-center justify-center"}>
+        <PageDiv className={"items-center justify-center absolute w-full h-full"}>
           <HomeName name={"HI"} />
         </PageDiv>
       ) : (
