@@ -1,7 +1,7 @@
-import ResumeTopicText from "../components/resume/ResumeTopicText";
-import AboutMeMain from "../components/about-me/AboutMeMain";
+import ResumeTopicText from "../../components/resume/ResumeTopicText";
+import AboutMeMain from "./AboutMeMain";
 
-const AboutMePage = () => {
+const AboutMeSection = () => {
   const aboutDetails = [
     { id: 0, topic: "name", text: "Akinwunmi Oluwasegun" },
     { id: 1, topic: "phone", text: "+234 90 4344 5618" },
@@ -20,4 +20,4 @@ const AboutMePage = () => {
   );
 };
 
-export default AboutMePage;
+export default AboutMeSection;

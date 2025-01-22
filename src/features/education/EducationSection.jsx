@@ -1,7 +1,7 @@
-import ResumeTopicText from "../components/resume/ResumeTopicText";
-import EducationMain from "../components/education/EducationMain";
+import ResumeTopicText from "../../components/resume/ResumeTopicText";
+import EducationMain from "./EducationMain";
 
-const EducationPage = () => {
+const EducationSection = () => {
   const educationDetails = [
     { id: 0, start_date: "09/2023", course: "computer science", school: "university of lagos" },
   ];
@@ -14,4 +14,4 @@ const EducationPage = () => {
   );
 };
 
-export default EducationPage;
+export default EducationSection;

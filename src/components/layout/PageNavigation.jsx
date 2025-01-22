@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ResumeButton from "../common/ResumeButton";
+import ResumeButton from "../resume/ResumeButton";
 
-const NavComponent = () => {
+const PageNavigation = () => {
   const navigate = useNavigate();
 
   const location = useLocation().pathname;
@@ -35,4 +35,4 @@ const NavComponent = () => {
   );
 };
 
-export default NavComponent;
+export default PageNavigation;

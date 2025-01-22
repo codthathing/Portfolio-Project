@@ -18,6 +18,9 @@ export default {
         },
         primary: "#1D4ED8",
       },
+      borderWidth: {
+        "[0.5px]": "0.5px",
+      },
       fontFamily: {
         Roboto: ['"Roboto"', 'sans-serif'],
         Yantramanav: ['"Yantramanav"', 'sans-serif'],

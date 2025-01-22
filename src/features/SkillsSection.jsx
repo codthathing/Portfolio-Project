@@ -1,6 +1,6 @@
 import StackSpan from "../components/common/StackSpan";
 
-const SkillsPage = () => {
+const SkillsSection = () => {
   const skillsDetails = [
     {
       id: 0, topic: "frontend technologies", skills: [
@@ -46,4 +46,4 @@ const SkillsPage = () => {
   );
 };
 
-export default SkillsPage;
+export default SkillsSection;

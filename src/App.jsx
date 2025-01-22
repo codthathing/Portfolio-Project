@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import PageLayout from "./components/ui/PageLayout";
+import PageLayout from "./components/layout/PageLayout";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
-import PageDiv from "./components/ui/PageDiv";
+import PageDiv from "./components/layout/PageDiv";
 import HomeName from "./components/ui/HomeName";
 import { useEffect, useState } from "react";
 

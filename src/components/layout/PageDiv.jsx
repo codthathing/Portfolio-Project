@@ -1,4 +1,4 @@
-import BackgroundStyle from "./BackgroundStyle";
+import BackgroundStyle from "../ui/BackgroundStyle";
 
 const PageDiv = ({ className, children }) => {
   return (

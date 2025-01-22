@@ -1,7 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import portfolio_logo from "../../assets/portfolio-logo.svg";
 import PageDiv from "./PageDiv";
-import NavComponent from "./NavComponent";
+import NavComponent from "./PageNavigation";
 import Footer from "./Footer";
 
 const PageLayout = () => {
