@@ -1,5 +1,5 @@
 import { faCss3, faHtml5, faReact, faJava, faPython, faJs, faBootstrap, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { SiTailwindcss, SiVercel, SiNetlify, SiGit } from "react-icons/si";
+import { SiTailwindcss, SiVercel, SiNetlify, SiGit, SiRedux, SiNextdotjs } from "react-icons/si";
 import { faDatabase, faC } from "@fortawesome/free-solid-svg-icons";
 
 export const checkStackDetails = (stack_name) => {
@@ -33,6 +33,10 @@ export const checkStackDetails = (stack_name) => {
       return { icon: SiVercel, text: "Vercel" };
     case "netlify":
       return { icon: SiNetlify, text: "Netlify" };
+    case "nextjs":
+      return { icon: SiNextdotjs, text: "NextJs" };
+    case "redux":
+      return { icon: SiRedux, text: "Redux" };
     default:
       break;
   };

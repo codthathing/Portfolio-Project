@@ -10,6 +10,7 @@ const SkillsSection = () => {
         { id: 3, stack_name: "react" },
         { id: 4, stack_name: "tailwind css" },
         { id: 5, stack_name: "bootstrap" },
+        { id: 5, stack_name: "nextjs" },
       ]
     },
     {
@@ -22,6 +23,7 @@ const SkillsSection = () => {
     {
       id: 2, topic: "tools & platforms", skills: [
         { id: 0, stack_name: "localstorage" },
+        { id: 0, stack_name: "redux" },
         { id: 1, stack_name: "git" },
         { id: 2, stack_name: "github" },
         { id: 3, stack_name: "netlify" },
