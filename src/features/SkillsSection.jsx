@@ -6,18 +6,17 @@ const SkillsSection = () => {
       id: 0, topic: "frontend technologies", skills: [
         { id: 0, stack_name: "html" },
         { id: 1, stack_name: "css" },
-        { id: 2, stack_name: "javascript" },
-        { id: 3, stack_name: "react" },
-        { id: 4, stack_name: "tailwind css" },
-        { id: 5, stack_name: "bootstrap" },
-        { id: 5, stack_name: "nextjs" },
+        { id: 2, stack_name: "bootstrap" },
+        { id: 3, stack_name: "tailwind css" },
+        { id: 4, stack_name: "javascript" },
+        { id: 5, stack_name: "typescript" },
+        { id: 6, stack_name: "react" },
+        { id: 7, stack_name: "nextjs" },
       ]
     },
     {
       id: 1, topic: "other programming languages", skills: [
-        { id: 0, stack_name: "c" },
-        { id: 1, stack_name: "python" },
-        { id: 3, stack_name: "java" },
+        { id: 0, stack_name: "python" },
       ]
     },
     {
