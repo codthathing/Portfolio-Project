@@ -1,6 +1,7 @@
 import { FaArrowRight, FaMobile } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import HomeName from "../components/ui/HomeName";
+import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
   const fronPageLinks = [
@@ -11,6 +12,10 @@ const HomePage = () => {
 
   return (
     <main className="main-center">
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://codthathing-dev.vercel.app" />
+      </Helmet>
       <div className="uppercase">
         <p className="font-Roboto text-gray-400 tracking-widest text-xs md:text-base lg:text-sm">hey, i'm</p>
         <HomeName name={"OLUWASEGUN"} className={"my-2 md:my-4"} />

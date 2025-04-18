@@ -5,6 +5,7 @@ import calor_stiches from "../assets/projects/calor-stiches.png";
 import kin_website from "../assets/projects/kin-website.png";
 import liveseg from "../assets/projects/liveseg.jpg";
 import music_player from "../assets/projects/music-player.png";
+import PageMain from "../components/layout/PageMain";
 import ProjectsPaginationButton from "../components/projects/ProjectsPaginationButton";
 import ProjectsTemplate from "../components/projects/ProjectsTemplate";
 import ProjectsPagination from "../components/projects/ProjectsPagination";
@@ -35,24 +36,24 @@ const ProjectsPage = () => {
         { id: 2, stack_name: "bootstrap" },
       ]
     },
+    // {
+    //   id: 3, project_image: akinia, project_topic: "Akin Shop", project_github: "Akin-Shop.git", project_link: "akin-shop.vercel.app", project_text: "It is an e-commerce with sections for foods, clothes, and shoes, making it easy for users to shop and manage their purchases in one place. It also provides a cart that displays each product's subtotal and total cost for all items.", project_stack: [
+    //     { id: 0, stack_name: "javascript" },
+    //     { id: 1, stack_name: "react" },
+    //     { id: 2, stack_name: "css" },
+    //     { id: 3, stack_name: "localstorage" },
+    //   ]
+    // },
+    // {
+    //   id: 4, project_image: kin_website, project_topic: "kin website", project_github: "Kin-Website.git", project_link: "webkin.netlify.app", project_text: "I built a website that offers services like UI/UX design, mobile and web app development, and product design. It also includes a customer review section for users to give feedbacks and experience about the quality of services provided.", project_stack: [
+    //     { id: 0, stack_name: "html" },
+    //     { id: 1, stack_name: "css" },
+    //     { id: 2, stack_name: "javascript" },
+    //     { id: 3, stack_name: "localstorage" },
+    //   ]
+    // },
     {
-      id: 3, project_image: akinia, project_topic: "Akin Shop", project_github: "Akin-Shop.git", project_link: "akin-shop.vercel.app", project_text: "It is an e-commerce with sections for foods, clothes, and shoes, making it easy for users to shop and manage their purchases in one place. It also provides a cart that displays each product's subtotal and total cost for all items.", project_stack: [
-        { id: 0, stack_name: "javascript" },
-        { id: 1, stack_name: "react" },
-        { id: 2, stack_name: "css" },
-        { id: 3, stack_name: "localstorage" },
-      ]
-    },
-    {
-      id: 4, project_image: kin_website, project_topic: "kin website", project_github: "Kin-Website.git", project_link: "webkin.netlify.app", project_text: "I built a website that offers services like UI/UX design, mobile and web app development, and product design. It also includes a customer review section for users to give feedbacks and experience about the quality of services provided.", project_stack: [
-        { id: 0, stack_name: "html" },
-        { id: 1, stack_name: "css" },
-        { id: 2, stack_name: "javascript" },
-        { id: 3, stack_name: "localstorage" },
-      ]
-    },
-    {
-      id: 5, project_image: music_player, project_topic: "akin music", project_github: "Music-Player.git", project_link: "kin-music-player.vercel.app", project_text: "This is is a ad-free music streaming platform, which users the opportunity to listen to a specified amount of music without any interruption, it provides them with some other features such as Play/Pause, Forward/Backward e.t.c", project_stack: [
+      id: 3, project_image: music_player, project_topic: "akin music", project_github: "Music-Player.git", project_link: "kin-music-player.vercel.app", project_text: "This is is a ad-free music streaming platform, which users the opportunity to listen to a specified amount of music without any interruption, it provides them with some other features such as Play/Pause, Forward/Backward e.t.c", project_stack: [
         { id: 1, stack_name: "css" },
         { id: 2, stack_name: "javascript" },
         { id: 3, stack_name: "react" },
@@ -62,7 +63,7 @@ const ProjectsPage = () => {
   const { changeProjectsShownPrev, currentIndex, newPaginationIndex, changeProjectsShownNext, paginationLength } = useRenderProjects(featuredProjects);
 
   return (
-    <main className="main-center">
+    <PageMain className={"main-center"}>
       <div className="relative w-11/12 lg:w-4/5">
         <section className="flex justify-between items-center">
           <ProjectsPaginationButton Icon={FaAngleLeft} buttonFunction={changeProjectsShownPrev} />
@@ -71,7 +72,7 @@ const ProjectsPage = () => {
         </section>
         {paginationLength && <ProjectsPagination paginationArray={paginationLength} presentPagination={newPaginationIndex} />}
       </div>
-    </main>
+    </PageMain>
   );
 };
 

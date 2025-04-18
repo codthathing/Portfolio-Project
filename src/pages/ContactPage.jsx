@@ -1,3 +1,4 @@
+import PageMain from "../components/layout/PageMain";
 import ContactDiv from "../components/contact/ContactDiv";
 import ContactTopicText from "../components/contact/ContactTopicText";
 import ContactInput from "../components/contact/ContactInput";
@@ -17,7 +18,7 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="md:flex md:justify-center md:items-center md:h-full">
+    <PageMain className={"md:flex md:justify-center md:items-center md:h-full"}>
       <main className="grid py-10 px-4 gap-y-4 md:py-10 md:gap-y-10 lg:gap-y-0 lg:grid-cols-2 md:w-2/4 lg:w-3/5 lg:gap-x-4">
         <ContactDiv>
           <ContactTopicText topic={"contact"} text={"Whether you're interested in networking, job opportunities, or casual conversation, I'm eager to connect and learn from our interactions!"} />
@@ -44,7 +45,7 @@ const ContactPage = () => {
           </form>
         </ContactDiv>
       </main>
-    </main>
+    </PageMain>
   );
 };
 
