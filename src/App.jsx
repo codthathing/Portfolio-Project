@@ -1,12 +1,12 @@
+import { useEffect, useState, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import PageLayout from "./components/layout/PageLayout";
-import HomePage from "./pages/HomePage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ResumePage from "./pages/ResumePage";
-import ContactPage from "./pages/ContactPage";
 import PageDiv from "./components/layout/PageDiv";
 import HomeName from "./components/ui/HomeName";
-import { useEffect, useState } from "react";
+import PageLayout from "./components/layout/PageLayout";
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const ResumePage = lazy(() => import("./pages/HomePage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 function App() {
   const [hasSeenAnimation, setHasSeenAnimation] = useState(JSON.parse(sessionStorage.getItem("hasSeenAnimation")) || false);
