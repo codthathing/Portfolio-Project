@@ -1,10 +1,8 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import link_hack from "../assets/projects/link-hack.png";
-import akinia from "../assets/projects/akinia.jpg";
-import calor_stiches from "../assets/projects/calor-stiches.png";
-import kin_website from "../assets/projects/kin-website.png";
+import link_hack from "../assets/projects/link-hack.jpg";
+import calor_stiches from "../assets/projects/calor-stiches.jpg";
 import liveseg from "../assets/projects/liveseg.jpg";
-import music_player from "../assets/projects/music-player.png";
+import music_player from "../assets/projects/music-player.jpg";
 import PageMain from "../components/layout/PageMain";
 import ProjectsPaginationButton from "../components/projects/ProjectsPaginationButton";
 import ProjectsTemplate from "../components/projects/ProjectsTemplate";
