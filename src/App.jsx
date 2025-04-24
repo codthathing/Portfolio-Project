@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import PageDiv from "./components/layout/PageDiv";
 import HomeName from "./components/ui/HomeName";
@@ -25,14 +25,16 @@ function App() {
           <HomeName name={"HI"} />
         </PageDiv>
       ) : (
-        <Routes>
-          <Route exact path="/" element={<PageLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="projects" element={<ProjectsPage />} />
-            <Route path="resume" element={<ResumePage />} />
-            <Route path="contact" element={<ContactPage />} />
-          </Route>
-        </Routes>
+        <Suspense>
+          <Routes>
+            <Route exact path="/" element={<PageLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="projects" element={<ProjectsPage />} />
+              <Route path="resume" element={<ResumePage />} />
+              <Route path="contact" element={<ContactPage />} />
+            </Route>
+          </Routes>
+        </Suspense>
       )}
     </>
   );
