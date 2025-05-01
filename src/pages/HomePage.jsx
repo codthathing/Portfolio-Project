@@ -1,14 +1,14 @@
 import { FaArrowRight, FaMobile } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import HomeName from "../components/ui/HomeName";
 import { Helmet } from "react-helmet-async";
+import { useNavigateToPage } from "../hooks/useNavigateToPage";
 
 const HomePage = () => {
   const fronPageLinks = [
     { id: 0, Icon: FaArrowRight, text: "view projects", destination: "/projects" },
     { id: 1, Icon: FaMobile, text: "contact me", destination: "/contact" },
   ];
-  const navigate = useNavigate();
+  const navigate = useNavigateToPage();
 
   return (
     <main className="main-center">

@@ -11,9 +11,6 @@ const ResumePage = () => {
       <ResumeTexts resumeShown={resumeShown} setResumeShown={setResumeShown} />
       <ResumeLayout resumeShown={resumeShown}/>
     </PageMain>
-    // <section className="grid lg:grid-cols-3 gap-y-6 lg:gap-x-8 px-4 md:px-12 lg:px-8 lg:h-full lg:overflow-hidden">
-
-    // </section>
   );
 };
 

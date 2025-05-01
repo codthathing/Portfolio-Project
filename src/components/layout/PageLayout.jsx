@@ -3,6 +3,7 @@ import portfolio_logo from "../../assets/portfolio-logo.svg";
 import PageDiv from "./PageDiv";
 import PageNavigation from "./PageNavigation";
 import Footer from "./Footer";
+import { Suspense } from "react";
 
 const PageLayout = () => {
   const navigate = useNavigate();
@@ -14,7 +15,9 @@ const PageLayout = () => {
         <PageNavigation />
       </header>
       <section className="z-10 flex-1 overflow-y-auto change-scrollbar">
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </section>
       <Footer />
     </PageDiv>

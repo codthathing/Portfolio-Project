@@ -1,10 +1,11 @@
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ResumeButton from "../resume/ResumeButton";
+import { useNavigateToPage } from "../../hooks/useNavigateToPage";
 
 const PageNavigation = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigateToPage();
 
   const location = useLocation().pathname;
 
