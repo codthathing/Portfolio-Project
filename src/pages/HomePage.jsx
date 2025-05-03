@@ -23,7 +23,7 @@ const HomePage = () => {
         <div className="flex items-center justify-between mt-5 md:mt-12 lg:mt-14 text-xs md:text-base lg:text-sm">
           {fronPageLinks.map(({ id, Icon, text, destination }) => {
             return (
-              <main key={id} onClick={() => navigate(destination)} className="group text-gray-400 transition-all ease-linear duration-200 hover:text-white flex items-center gap-x-2 md:gap-x-3 lg:gap-x-4 cursor-pointer">
+              <main key={id} onClick={() => navigate(destination)} className="group text-gray-400 select-none transition-all ease-linear duration-200 hover:text-white flex items-center gap-x-2 md:gap-x-3 lg:gap-x-4 cursor-pointer">
                 <Icon className="text-base md:text-2xl lg:text-xl" />
                 <span className="font-Roboto tracking-wider border-b border-gray-400 transition-all ease-linear duration-200 group-hover:border-white pb-0.5 lg:pb-1">{text}</span>
               </main>

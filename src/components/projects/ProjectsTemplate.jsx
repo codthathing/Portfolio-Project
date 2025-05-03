@@ -7,7 +7,7 @@ const ProjectsTemplate = ({ projectsArray }) => {
       {projectsArray.map(({ id, project_image, project_topic, project_text, project_github, project_link, project_stack }) => {
         return (
           <div key={id} className="flex flex-col bg-grey-semidark shadow-xl rounded-2xl overflow-hidden">
-            <img src={project_image} loading="eager" alt={project_topic.toUpperCase()} className="w-full h-36 md:h-56 lg:h-52" />
+            <img src={project_image} loading="lazy" fetchPriority="high" alt={project_topic.toUpperCase()} className="w-full h-36 md:h-56 lg:h-52" />
             <section className="flex flex-col flex-1 p-4 md:p-6 lg:p-4">
               <h1 className="capitalize font-bold text-base md:text-2xl lg:text-xl text-white font-Yantramanav">{project_topic}</h1>
               <div className="my-4 md:my-6 lg:my-4 flex-1"><p className="text-xs md:text-lg lg:text-base limit-text-line text-grey-textdark font-Roboto">{project_text}</p></div>
