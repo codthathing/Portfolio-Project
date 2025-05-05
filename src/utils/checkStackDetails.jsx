@@ -1,6 +1,5 @@
-import { SiTailwindcss, SiVercel, SiNetlify, SiRedux, SiNextdotjs, SiTypescript, SiGit } from "react-icons/si";
-import { FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaBootstrap, FaGithub } from "react-icons/fa";
-import { FaC } from "react-icons/fa6";
+import { SiTailwindcss, SiVercel, SiNetlify, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary } from "react-icons/si";
+import { FaC, FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaBootstrap, FaGithub } from "react-icons/fa6";
 
 export const checkStackDetails = (stack_name) => {
   const stack_name_lower = stack_name.toLowerCase();
@@ -23,6 +22,14 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: SiNextdotjs, text: "NextJs" };
     case "redux":
       return { Icon: SiRedux, text: "Redux" };
+    case "jest":
+      return { Icon: SiJest, text: "Jest" };
+    case "rtl":
+      return { Icon: SiTestinglibrary, text: "React Testing Library" };
+    case "framer motion":
+      return { Icon: SiFramer, text: "Framer Motion" };
+    case "supabase":
+      return { Icon: SiSupabase, text: "Supabase" };
     case "java":
       return { Icon: FaJava, text: "Java" };
     case "python":
@@ -31,6 +38,8 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: FaC, text: "" };
     case "localstorage":
       return { Icon: FaDatabase, text: "localStorage" };
+    case "index db":
+      return { Icon: FaDatabase, text: "IndexDB" };
     case "git":
       return { Icon: SiGit, text: "Git" };
     case "github":

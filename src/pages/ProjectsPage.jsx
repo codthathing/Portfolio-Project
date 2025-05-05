@@ -23,7 +23,7 @@ const ProjectsPage = () => {
       id: 1, project_image: link_hack, project_topic: "link app", project_github: "Link-App.git", project_link: "kin-link-app.vercel.app", project_text: "Link app provides user with the ability to add links, visit the links, and also copy the links for sharing, making it simple and convenient to manage and share their information.", project_stack: [
         { id: 0, stack_name: "react" },
         { id: 1, stack_name: "tailwind css" },
-        { id: 2, stack_name: "localstorage" },
+        { id: 2, stack_name: "supabase" },
         { id: 3, stack_name: "javascript" },
       ]
     },

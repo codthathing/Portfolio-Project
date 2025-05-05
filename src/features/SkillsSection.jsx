@@ -15,18 +15,31 @@ const SkillsSection = () => {
       ]
     },
     {
-      id: 1, topic: "other programming languages", skills: [
+      id: 1, topic: "backend technologies", skills: [
+        { id: 0, stack_name: "supabase" },
+      ]
+    },
+    {
+      id: 2, topic: "testing", skills: [
+        { id: 0, stack_name: "jest" },
+        { id: 1, stack_name: "rtl" },
+      ]
+    },
+    {
+      id: 3, topic: "other programming languages", skills: [
         { id: 0, stack_name: "python" },
       ]
     },
     {
-      id: 2, topic: "tools & platforms", skills: [
+      id: 4, topic: "tools & platforms", skills: [
         { id: 0, stack_name: "localstorage" },
-        { id: 0, stack_name: "redux" },
-        { id: 1, stack_name: "git" },
-        { id: 2, stack_name: "github" },
-        { id: 3, stack_name: "netlify" },
-        { id: 4, stack_name: "vercel" },
+        { id: 1, stack_name: "index db" },
+        { id: 2, stack_name: "redux" },
+        { id: 3, stack_name: "framer motion" },
+        { id: 4, stack_name: "git" },
+        { id: 5, stack_name: "github" },
+        { id: 6, stack_name: "netlify" },
+        { id: 7, stack_name: "vercel" },
       ]
     },
   ];
