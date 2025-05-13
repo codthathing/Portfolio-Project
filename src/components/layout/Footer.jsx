@@ -17,7 +17,7 @@ const Footer = () => {
       { id: 1, text: "On mobile: Explore using the icon at the top-right" },
       { id: 2, text: "Click on the robot to expand/collapse" },
       { id: 3, text: "Navigate to home page using the icon at the top-left" },
-      { id: 4, text: "Click on the email address to send an email directly" },
+      { id: 4, text: "Click on the email address to send a direct email" },
     ],
     text: "Welcome to my portfolio!",
   });
