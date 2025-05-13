@@ -2,31 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  @apply overflow-hidden;
+  /* overflow: hidden */
+}
+
 .main-center {
   @apply flex items-center justify-center h-full;
 }
 
 .change-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.limit-text-line {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media all and (max-width: 767px) {
-  .limit-text-line {
-    -webkit-line-clamp: 4;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .limit-text-line {
-    -webkit-line-clamp: 5;
-  }
 }
 
 @media all and (min-width: 1024px) {
