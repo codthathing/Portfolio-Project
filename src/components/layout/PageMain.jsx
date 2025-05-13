@@ -6,7 +6,7 @@ const PageMain = ({ children, className }) => {
   const { initialX } = usePagePosition(770, 1030, 2000);
 
   return (
-    <motion.section initial={{ x: initialX }} animate={{ x: 0, transition: { duration: 0.5 } }} className={className}>
+    <motion.section initial={{ x: initialX }} animate={{ x: 0, transition: { type: "spring", duration: 0.5, damping: 15 } }} className={className}>
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://codthathing-dev.vercel.app" />
