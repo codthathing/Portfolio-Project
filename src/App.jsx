@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy, useMemo } from "react";
+import { useEffect, useState, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import PageDiv from "./components/layout/PageDiv";
 import HomeName from "./components/ui/HomeName";
@@ -11,12 +11,12 @@ const ResumePage = lazy(() => import("./pages/ResumePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 function App() {
-  const [hasSeenAnimation, setHasSeenAnimation] = useState(false);
-  // const [hasSeenAnimation, setHasSeenAnimation] = useState(JSON.parse(sessionStorage.getItem("hasSeenAnimation")) || false);
+  const [hasSeenAnimation, setHasSeenAnimation] = useState(JSON.parse(sessionStorage.getItem("hasSeenAnimation")) || { loadAnimation: false, pageAnimation: true });
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
-      // sessionStorage.setItem("hasSeenAnimation", true);
-      setHasSeenAnimation(true);
+      sessionStorage.setItem("hasSeenAnimation", JSON.stringify({ ...hasSeenAnimation, loadAnimation: true }));
+      setHasSeenAnimation({ ...hasSeenAnimation, loadAnimation: true });
     }, 3000);
     return () => clearTimeout(timeout);
   }, []);
@@ -25,14 +25,14 @@ function App() {
     <AnimatePresence>
       <Routes>
         <Route exact path="/" element={<PageBackground />}>
-          {!hasSeenAnimation ? (
+          {!hasSeenAnimation.loadAnimation ? (
             <Route index element={
               <PageDiv key={"splash"} className={"items-center justify-center absolute w-full h-full"}>
                 <HomeName name={"HI"} />
               </PageDiv>
             }/>
           ) : (
-            <Route element={<PageLayout />}>
+            <Route element={<PageLayout animation={hasSeenAnimation} setAnimation={setHasSeenAnimation} />}>
               <Route index element={<HomePage />} />
               <Route path="projects" element={<ProjectsPage />} />
               <Route path="resume" element={<ResumePage />} />
