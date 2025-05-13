@@ -1,11 +1,12 @@
 import BackgroundStyle from "../ui/BackgroundStyle";
+import { motion } from "framer-motion";
 
-const PageDiv = ({ className, children }) => {
+const PageDiv = ({ className, children, animate, initial, exit, transition }) => {
   return (
-    <div className={`bg-dark-semi flex ${className}`}>
-      <BackgroundStyle />
+    <motion.div animate={animate} initial={initial} exit={exit} transition={transition} className={`flex ${className}`}>
+      {/* <BackgroundStyle /> */}
       {children}
-    </div>
+    </motion.div>
   );
 };
 
