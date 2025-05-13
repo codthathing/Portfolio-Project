@@ -2,8 +2,6 @@ import { FaArrowRight, FaMobile } from "react-icons/fa";
 import HomeName from "../components/ui/HomeName";
 import { Helmet } from "react-helmet-async";
 import { useNavigateToPage } from "../hooks/useNavigateToPage";
-import { usePagePosition } from "../hooks/usePagePosition";
-import { motion } from "framer-motion";
 
 const HomePage = () => {
   const fronPageLinks = [
@@ -11,10 +9,9 @@ const HomePage = () => {
     { id: 1, Icon: FaMobile, text: "contact me", destination: "/contact" },
   ];
   const navigate = useNavigateToPage();
-  const { initialX } = usePagePosition(770, 1030, 2000);
 
   return (
-    <motion.main initial={{ x: initialX }} animate={{ x: 0, transition: { type: "spring", duration: 0.5, damping: 15 } }} className="main-center">
+    <main className="main-center">
       <Helmet>
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://codthathing-dev.vercel.app" />
@@ -34,7 +31,7 @@ const HomePage = () => {
           })}
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 };
 

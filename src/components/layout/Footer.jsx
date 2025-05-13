@@ -43,7 +43,7 @@ const Footer = () => {
       <motion.div 
         layout="size-width"
         transition={{ type: "tween", duration: 0.5, ease: "linear", when: "beforeChildren" }}
-        className={`absolute right-4 bottom-4 md:right-10 md:bottom-8 lg:right-16 lg:bottom-5 max-w-[60%] md:max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
+        className={`absolute right-4 bottom-4 md:right-10 md:bottom-8 lg:right-16 lg:bottom-5 max-w-[70%] md:max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
         <FaRobot onClick={() => setShowInformation((prevState) => !prevState )} className="text-sm md:text-2xl lg:text-xl cursor-pointer" />
         <AnimatePresence>
           {showInformation && (
@@ -51,7 +51,7 @@ const Footer = () => {
               initial={{ width: 0 }} 
               animate={{ width: "auto" }} 
               exit={{ width: 0 }}
-              transition={{ duration: 0.75, ease: "linear", delay: 0.25 }}
+              transition={{ duration: 0.75, ease: "linear", delay: 0.5 }}
               className={`flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3 overflow-hidden`}>
               <FaArrowRight className="md:text-lg lg:text-base hidden md:block" />
               <span className=" text-[8px] md:text-lg lg:text-base font-Roboto text-nowrap">{informationDetails.text}</span>

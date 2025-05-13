@@ -15,7 +15,7 @@ const PageLayout = ({ animation, setAnimation }) => {
     const timeout = setTimeout(() => {
       sessionStorage.setItem("hasSeenAnimation", JSON.stringify({ ...animation, pageAnimation: false }));
       setAnimation({ ...animation, pageAnimation: false });
-    }, 3000);
+    }, 500);
     return () => clearTimeout(timeout);
   }, [])
 
