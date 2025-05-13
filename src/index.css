@@ -902,6 +902,10 @@ video {
   overflow-y: auto;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .whitespace-pre-line {
   white-space: pre-line;
 }
@@ -964,6 +968,11 @@ video {
 .border-neutral-700 {
   --tw-border-opacity: 1;
   border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
 
 .bg-dark-semi {

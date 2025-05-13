@@ -4,7 +4,6 @@ import PageDiv from "./components/layout/PageDiv";
 import HomeName from "./components/ui/HomeName";
 import PageLayout from "./components/layout/PageLayout";
 import HomePage from "./pages/HomePage";
-import { AnimatePresence } from "framer-motion";
 import PageBackground from "./components/layout/PageBackground";
 const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
 const ResumePage = lazy(() => import("./pages/ResumePage"));
@@ -22,26 +21,24 @@ function App() {
   }, []);
 
   return (
-    <AnimatePresence>
-      <Routes>
-        <Route exact path="/" element={<PageBackground />}>
-          {!hasSeenAnimation.loadAnimation ? (
-            <Route index element={
-              <PageDiv key={"splash"} className={"items-center justify-center absolute w-full h-full"}>
-                <HomeName name={"HI"} />
-              </PageDiv>
-            }/>
-          ) : (
-            <Route element={<PageLayout animation={hasSeenAnimation} setAnimation={setHasSeenAnimation} />}>
-              <Route index element={<HomePage />} />
-              <Route path="projects" element={<ProjectsPage />} />
-              <Route path="resume" element={<ResumePage />} />
-              <Route path="contact" element={<ContactPage />} />
-            </Route>
-          )} 
-        </Route>
-      </Routes>
-    </AnimatePresence>
+    <Routes>
+      <Route exact path="/" element={<PageBackground />}>
+        {!hasSeenAnimation.loadAnimation ? (
+          <Route index element={
+            <PageDiv key={"splash"} className={"items-center justify-center absolute w-full h-full"}>
+              <HomeName name={"HI"} />
+            </PageDiv>
+          }/>
+        ) : (
+          <Route element={<PageLayout animation={hasSeenAnimation} setAnimation={setHasSeenAnimation} />}>
+            <Route index element={<HomePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="resume" element={<ResumePage />} />
+            <Route path="contact" element={<ContactPage />} />
+          </Route>
+        )} 
+      </Route>
+    </Routes>
   );
 }
 
