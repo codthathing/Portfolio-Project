@@ -757,10 +757,6 @@ video {
   width: 100%;
 }
 
-.max-w-\[60\%\] {
-  max-width: 60%;
-}
-
 .max-w-\[70\%\] {
   max-width: 70%;
 }
@@ -1768,6 +1764,34 @@ video {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .md\:pt-14 {
+    padding-top: 3.5rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
+  }
+
+  .md\:pt-3 {
+    padding-top: 0.75rem;
+  }
+
+  .md\:pt-36 {
+    padding-top: 9rem;
+  }
+
+  .md\:pt-4 {
+    padding-top: 1rem;
+  }
+
+  .md\:pt-44 {
+    padding-top: 11rem;
   }
 
   .md\:text-start {

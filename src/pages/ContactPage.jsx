@@ -18,7 +18,7 @@ const ContactPage = () => {
   };
 
   return (
-    <PageMain className={"md:flex md:justify-center md:items-center md:h-full select-none"}>
+    <PageMain className={"md:pt-44 md:flex md:justify-center md:items-center md:h-full select-none"}>
       <main className="grid py-10 px-4 gap-y-4 md:py-10 md:gap-y-10 lg:gap-y-0 lg:grid-cols-2 md:w-2/4 lg:w-3/5 lg:gap-x-4">
         <ContactDiv>
           <ContactTopicText topic={"contact"} text={"Whether you're interested in networking, job opportunities, or casual conversation, I'm eager to connect and learn from our interactions!"} />
