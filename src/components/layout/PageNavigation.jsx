@@ -8,13 +8,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const PageNavigation = ({ setNavigation, navigation }) => {
   const navigate = useNavigateToPage();
   const location = useLocation().pathname;  
-  // const [isHydrated, setIsHydrated] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => setIsHydrated(true), 3000);
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsHydrated(true), 3000);
 
-  //   return () => clearTimeout(timeout);
-  // }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const pageNavigation = [
     { id: 0, text: "projects" },
@@ -33,13 +33,12 @@ const PageNavigation = ({ setNavigation, navigation }) => {
 
   return (
     <>
-      <div onClick={() => /* isHydrated && */setNavigation(prevState => !prevState)} className="relative group select-none md:hidden cursor-pointer mr-4 md:m-0 border-2 border-gray-400 transition-all ease-linear duration-200 hover:border-white rounded-md w-8 h-8">
+      <div onClick={() => isHydrated && setNavigation(prevState => !prevState)} className="relative group select-none md:hidden cursor-pointer mr-4 md:m-0 border-2 border-gray-400 transition-all ease-linear duration-200 hover:border-white rounded-md w-8 h-8">
         {navigation ? <FaXmark className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" /> : <FaBars className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" />}
       </div>
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {navigation && (
           <Nav
-            key={"mobile-nav"}
             initial={{ height: 0  }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
