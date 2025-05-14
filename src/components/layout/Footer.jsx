@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { FaRobot, FaArrowRight, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
-  const socialsPages = [
+  const socialsPages = useMemo(() => [
     { id: 0, text: "Twitter", Icon: FaXTwitter, socialsLink: "https://x.com/codthathing" },
     { id: 1, text: "Linkedin", Icon: FaLinkedin, socialsLink: "https://linkedin.com/in/codthathing" },
     { id: 2, text: "Github", Icon: FaGithub, socialsLink: "https://github.com/codthathing" },
-  ];
+  ]);
   const location = useLocation().pathname;
   const [showInformation, setShowInformation] = useState(true);
   const [informationDetails, setInformationDetails] = useState({
@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer className={`relative p-4 md:py-8 md:px-10 lg:py-8 lg:px-16`}>
-      <div className={`${location !== "/" ? "invisible" : ""} md:visible flex items-center gap-x-5 md:gap-x-10 lg:gap-x-7`}>
+      <div className={`${location !== "/" ? "invisible opacity-0 md:opacity-100" : "opacity-100"} transition-opacity duration-200 ease-linear md:visible flex items-center gap-x-5 md:gap-x-10 lg:gap-x-7`}>
         {socialsPages.map(({ id, text, Icon, socialsLink }) => (
           <a key={id} target="_blank" aria-label={text} href={socialsLink}>
             <Icon className="text-gray-400 text-base md:text-2xl lg:text-xl transition-all ease-linear duration-200 hover:scale-125" />
@@ -57,10 +57,10 @@ const Footer = () => {
               <span className=" text-[8px] md:text-lg lg:text-base font-Roboto text-nowrap">{informationDetails.text}</span>
             </motion.section>
           )}
-        </AnimatePresence>
+        </AnimatePresence> 
       </motion.div>
     </footer>
   );
 };
 
-export default Footer;
+export default memo(Footer);

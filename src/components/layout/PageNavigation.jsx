@@ -5,16 +5,18 @@ import ResumeButton from "../resume/ResumeButton";
 import { useNavigateToPage } from "../../hooks/useNavigateToPage";
 import { motion, AnimatePresence } from "framer-motion";
 
-const PageNavigation = ({ navigation, setNavigation }) => {
+const PageNavigation = () => {
   const navigate = useNavigateToPage();
   const location = useLocation().pathname;  
   const [isHydrated, setIsHydrated] = useState(false);
+  const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
+    setShowNavigation(false);
     const timeout = setTimeout(() => setIsHydrated(true), 3000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [location]);
 
   const pageNavigation = [
     { id: 0, text: "projects" },
@@ -33,17 +35,17 @@ const PageNavigation = ({ navigation, setNavigation }) => {
 
   return (
     <>
-      <div onClick={() => isHydrated && setNavigation(prevState => !prevState)} className="relative group select-none md:hidden cursor-pointer mr-4 md:m-0 border-2 border-gray-400 transition-all ease-linear duration-200 hover:border-white rounded-md w-8 h-8">
-        {navigation ? <FaXmark className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" /> : <FaBars className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" />}
+      <div onClick={() => isHydrated && setShowNavigation(prevState => !prevState)} className="relative group select-none md:hidden cursor-pointer mr-4 md:m-0 border-2 border-gray-400 transition-all ease-linear duration-200 hover:border-white rounded-md w-8 h-8">
+        {showNavigation ? <FaXmark className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" /> : <FaBars className="absolute text-gray-400 transition-all ease-linear duration-200 group-hover:text-white text-sm left-0 right-0 top-0 bottom-0 m-auto" />}
       </div>
       <AnimatePresence initial={false}>
-        {navigation && (
+        {showNavigation && (
           <Nav
             id="mobile-nav"
             initial={{ height: 0  }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
-            transition={{ duration: 0.5, type: "tween", ease: "linear" }}
+            transition={{ duration: 0.35, type: "tween", ease: "linear" }}
             className={"flex md:hidden absolute bg-dark-semi flex-col py-2 z-20 top-full overflow-hidden w-full"}>
             <ResumeButton mainClass={"flex md:hidden self-end w-fit"} />
           </Nav>
