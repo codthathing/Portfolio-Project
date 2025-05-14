@@ -4,6 +4,9 @@ import { Helmet } from "react-helmet-async";
 import { useNavigateToPage } from "../hooks/useNavigateToPage";
 import { motion } from "framer-motion";
 import { usePagePosition } from "../hooks/usePagePosition";
+import { memo } from "react";
+import { useLocation } from "react-router-dom";
+
 
 const HomePage = ({ animation }) => {
   const fronPageLinks = [
