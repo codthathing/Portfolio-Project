@@ -32,7 +32,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className={`relative p-4 md:py-8 md:px-10 lg:py-5 lg:px-16`}>
+    <footer className={`relative p-4 md:py-8 md:px-10 lg:py-8 lg:px-16`}>
       <div className={`${location !== "/" ? "invisible" : ""} md:visible flex items-center gap-x-5 md:gap-x-10 lg:gap-x-7`}>
         {socialsPages.map(({ id, text, Icon, socialsLink }) => (
           <a key={id} target="_blank" aria-label={text} href={socialsLink}>
@@ -43,7 +43,7 @@ const Footer = () => {
       <motion.div 
         layout="size-width"
         transition={{ type: "tween", duration: 0.5, ease: "linear", when: "beforeChildren" }}
-        className={`absolute right-4 bottom-4 md:right-10 md:bottom-8 lg:right-16 lg:bottom-5 max-w-[70%] md:max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
+        className={`absolute bottom-0 top-0 h-fit my-auto right-4 md:right-10 lg:right-16 max-w-[70%] md:max-w-[65%] text-white bg-grey-dark/50 backdrop-blur-sm rounded-full shadow-lg border border-grey-dark/20 p-2 md:p-4 lg:p-3 flex items-center gap-x-2 md:gap-x-4 lg:gap-x-3`}>
         <FaRobot onClick={() => setShowInformation((prevState) => !prevState )} className="text-sm md:text-2xl lg:text-xl cursor-pointer" />
         <AnimatePresence>
           {showInformation && (

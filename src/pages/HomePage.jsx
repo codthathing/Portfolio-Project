@@ -2,16 +2,19 @@ import { FaArrowRight, FaMobile } from "react-icons/fa";
 import HomeName from "../components/ui/HomeName";
 import { Helmet } from "react-helmet-async";
 import { useNavigateToPage } from "../hooks/useNavigateToPage";
+import { motion } from "framer-motion";
+import { usePagePosition } from "../hooks/usePagePosition";
 
-const HomePage = () => {
+const HomePage = ({ animation }) => {
   const fronPageLinks = [
     { id: 0, Icon: FaArrowRight, text: "view projects", destination: "/projects" },
     { id: 1, Icon: FaMobile, text: "contact me", destination: "/contact" },
   ];
   const navigate = useNavigateToPage();
+  const { initialX } = usePagePosition(770, 1030, 2000);
 
   return (
-    <main className="main-center">
+    <motion.main {...(!animation.pageAnimation && { initial: { x: initialX }, animate: { x: 0, transition: { type: "spring", duration: 0.5, damping: 15 } } } )} className="main-center">
       <Helmet>
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://codthathing-dev.vercel.app" />
@@ -31,7 +34,7 @@ const HomePage = () => {
           })}
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
 
