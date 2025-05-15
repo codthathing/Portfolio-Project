@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ResumeButton from "../resume/ResumeButton";
 import { useNavigateToPage } from "../../hooks/useNavigateToPage";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 
 const PageNavigation = () => {
   const navigate = useNavigateToPage();
@@ -38,10 +38,13 @@ const PageNavigation = () => {
 
   const HamburgerButton = ({ isOpen, toggle }) => {
     return (
-      <button onClick={toggle} className="flex md:hidden flex-col gap-y-1 mr-4 p-1 rounded-md border-2 border-gray-400">
-        <motion.div key={isOpen} initial={{ ...(!isOpen && { rotate: -18 }) }} animate={{ rotate: isOpen ? -18 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] w-[16px] bg-gray-400 origin-right" />
-        <motion.div key={!isOpen} initial={{ ...(!isOpen && { rotate: 18 }) }} animate={{ rotate: isOpen ? 18 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] w-[16px] bg-gray-400 origin-right" />
-      </button>
+      <MotionConfig transition={{ duration: 0.35, ease: "easeInOut" }}>
+        <motion.button initial={false} onClick={toggle} animate={isOpen ? "open" : "close"} className="relative md:hidden h-8 w-8 mr-4 rounded-md border-2 border-gray-400">
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["25%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "25%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "25%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "-45deg"] }, close: { rotate: ["-45deg", "0deg", "0deg"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "50%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["75%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "75%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "75%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
+        </motion.button>
+      </MotionConfig>
     );
   };
 
