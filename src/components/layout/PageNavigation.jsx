@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { useLocation } from "react-router-dom";
 import ResumeButton from "../resume/ResumeButton";
 import { useNavigateToPage } from "../../hooks/useNavigateToPage";
@@ -7,14 +7,14 @@ import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 const PageNavigation = () => {
   const navigate = useNavigateToPage();
   const location = useLocation().pathname;
-  const [isHydrated, setIsHydrated] = useState(false);
+  // const [isHydrated, setIsHydrated] = useState(false);
   const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
     setShowNavigation(false);
-    const timeout = setTimeout(() => setIsHydrated(true), 3000);
+    //   const timeout = setTimeout(() => setIsHydrated(true), 3000);
 
-    return () => clearTimeout(timeout);
+    //   return () => clearTimeout(timeout);
   }, [location]);
 
   const pageNavigation = [
@@ -23,7 +23,7 @@ const PageNavigation = () => {
     { id: 4, text: "contact" },
   ];
 
-  const Nav = ({ className, children, initial, animate, exit, transition }) => {
+  const Nav = memo(({ className, children, initial, animate, exit, transition }) => {
     return (
       <motion.nav initial={initial} animate={animate} exit={exit} transition={transition} className={`select-none ${className}`}>
         {pageNavigation.map(({ id, text }) => (
@@ -34,23 +34,25 @@ const PageNavigation = () => {
         {children}
       </motion.nav>
     );
-  };
+  });
 
-  const HamburgerButton = ({ isOpen, toggle }) => {
+  const HamburgerButton = memo(({ isOpen, toggle }) => {
     return (
       <MotionConfig transition={{ duration: 0.35, ease: "easeInOut" }}>
-        <motion.button initial={false} onClick={toggle} animate={isOpen ? "open" : "close"} className="relative md:hidden h-8 w-8 mr-4 rounded-md border-2 border-gray-400">
-          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["25%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "25%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "25%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
-          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "-45deg"] }, close: { rotate: ["-45deg", "0deg", "0deg"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "50%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
-          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["75%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "75%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", left: "50%", top: "75%" }} className="absolute h-[2px] w-[16px] mx-auto bg-gray-400" />
+        <motion.button onClick={toggle} animate={isOpen ? "open" : "close"} initial={false} className="relative md:hidden h-8 w-8 mr-4 rounded-md border-2 border-gray-400">
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["25%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "25%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", top: "25%" }} className="absolute h-[2px] w-[16px] bg-gray-400" />
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "-45deg"] }, close: { rotate: ["-45deg", "0deg", "0deg"] } }} style={{ x: "-50%", left: "50%", y: "-50%", top: "50%" }} className="absolute h-[2px] w-[16px] bg-gray-400" />
+          <motion.div variants={{ open: { rotate: ["0deg", "0deg", "45deg"], top: ["75%", "50%", "50%"] }, close: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "75%"] } }} style={{ x: "-50%", left: "50%", y: "-50%", top: "75%" }} className="absolute h-[2px] w-[16px] bg-gray-400" />
         </motion.button>
       </MotionConfig>
     );
-  };
+  });
+
+  //  isHydrated &&
 
   return (
     <>
-      <HamburgerButton isOpen={showNavigation} toggle={() => isHydrated && setShowNavigation((prevState) => !prevState)} />
+      <HamburgerButton isOpen={showNavigation} toggle={() => setShowNavigation((prevState) => !prevState)} />
       <AnimatePresence initial={false}>
         {showNavigation && (
           <Nav initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} transition={{ duration: 0.35, type: "tween", ease: "linear" }} className={"flex md:hidden absolute bg-dark-semi flex-col py-2 z-20 top-full overflow-hidden w-full"}>
@@ -64,4 +66,4 @@ const PageNavigation = () => {
   );
 };
 
-export default PageNavigation;
+export default memo(PageNavigation);
