@@ -15,7 +15,7 @@ const PageNavigation = () => {
     const timeout = setTimeout(() => setIsHydrated(true), 3000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [location]);
 
   const pageNavigation = [
     { id: 0, text: "projects" },
@@ -39,9 +39,8 @@ const PageNavigation = () => {
   const HamburgerButton = ({ isOpen, toggle }) => {
     return (
       <button onClick={toggle} className="flex md:hidden flex-col gap-y-1 mr-4 p-1 rounded-md border-2 border-gray-400">
-        <motion.div initial={{ width: 16 }} animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 4.85 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] bg-gray-400 origin-center" />
-        <motion.div initial={{ width: 16 }} animate={{ opacity: isOpen ? 0 : 1, width: isOpen ? 0 : 16, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] bg-gray-400" />
-        <motion.div initial={{ width: 16 }} animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -4.85 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] bg-gray-400 origin-center" />
+        <motion.div key={isOpen} initial={{ ...(!isOpen && { rotate: -18 }) }} animate={{ rotate: isOpen ? -18 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] w-[16px] bg-gray-400 origin-right" />
+        <motion.div key={!isOpen} initial={{ ...(!isOpen && { rotate: 18 }) }} animate={{ rotate: isOpen ? 18 : 0, transition: { type: "tween", duration: 0.35 } }} className="h-[2px] w-[16px] bg-gray-400 origin-right" />
       </button>
     );
   };

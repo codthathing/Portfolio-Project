@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import link_hack from "../assets/projects/link-hack.webp";
 import calor_stiches from "../assets/projects/calor-stiches.webp";
@@ -8,9 +9,10 @@ import ProjectsPaginationButton from "../components/projects/ProjectsPaginationB
 import ProjectsTemplate from "../components/projects/ProjectsTemplate";
 import ProjectsPagination from "../components/projects/ProjectsPagination";
 import { useRenderProjects } from "../hooks/useRenderProjects";
-import { useEffect } from "react";
 
 const ProjectsPage = () => {
+  const [animation, setAnimation] = useState({ initial: "", exit: "" });
+
   const featuredProjects = [
     {
       id: 0,
@@ -83,18 +85,14 @@ const ProjectsPage = () => {
       ],
     },
   ];
-  const { changeProjectsShownPrev, currentIndex, newPaginationIndex, changeProjectsShownNext, paginationLength } = useRenderProjects(featuredProjects);
-
-  useEffect(() => {
-    console.log(newPaginationIndex);
-  }, [newPaginationIndex]);
+  const { changeProjectsShownPrev, currentIndex, newPaginationIndex, changeProjectsShownNext, paginationLength } = useRenderProjects(featuredProjects, setAnimation);
 
   return (
     <PageMain className={"main-center"}>
       <div className="relative w-11/12 lg:w-4/5">
         <section className="flex justify-between items-center">
           <ProjectsPaginationButton Icon={FaAngleLeft} buttonFunction={changeProjectsShownPrev} />
-          {currentIndex && <ProjectsTemplate projectsArray={featuredProjects.slice(newPaginationIndex * currentIndex, newPaginationIndex * currentIndex + currentIndex)} />}
+          <div className="overflow-hidden w-[77.5%] md:w-4/5 lg:w-10/12">{currentIndex && <ProjectsTemplate keyId={newPaginationIndex} animation={animation} projectsArray={featuredProjects.slice(newPaginationIndex * currentIndex, newPaginationIndex * currentIndex + currentIndex)} />}</div>
           <ProjectsPaginationButton Icon={FaAngleRight} buttonFunction={changeProjectsShownNext} />
         </section>
         {paginationLength && <ProjectsPagination paginationArray={paginationLength} presentPagination={newPaginationIndex} />}

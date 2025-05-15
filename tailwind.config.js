@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
   theme: {
     extend: {
       colors: {
         dark: {
-          semi: "#171717"
+          semi: "#171717",
         },
         grey: {
           light: "#B7B7B7",
@@ -22,9 +22,9 @@ export default {
         "[0.5px]": "0.5px",
       },
       fontFamily: {
-        Roboto: ['"Roboto"', 'sans-serif'],
-        Yantramanav: ['"Yantramanav"', 'sans-serif'],
-      },   
+        Roboto: ['"Roboto"', "sans-serif"],
+        Yantramanav: ['"Yantramanav"', "sans-serif"],
+      },
       backdropBlur: {
         xs: "2px",
       },

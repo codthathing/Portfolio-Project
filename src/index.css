@@ -606,10 +606,6 @@ video {
   z-index: 20;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -630,17 +626,8 @@ video {
   margin-bottom: auto;
 }
 
-.my-1\.5 {
-  margin-top: 0.375rem;
-  margin-bottom: 0.375rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mb-1\.5 {
-  margin-bottom: 0.375rem;
 }
 
 .mb-4 {
@@ -710,10 +697,6 @@ video {
   height: 0.25rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-36 {
   height: 9rem;
 }
@@ -722,12 +705,12 @@ video {
   height: 1.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-\[100dvh\] {
   height: 100dvh;
+}
+
+.h-\[2px\] {
+  height: 2px;
 }
 
 .h-fit {
@@ -737,26 +720,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-0\.5 {
-  height: 0.125rem;
-}
-
-.h-\[3px\] {
-  height: 3px;
-}
-
-.h-\[2\.5px\] {
-  height: 2.5px;
-}
-
-.h-\[2px\] {
-  height: 2px;
-}
-
-.h-0 {
-  height: 0px;
 }
 
 .w-1 {
@@ -771,10 +734,6 @@ video {
   width: 91.666667%;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .w-3\/5 {
   width: 60%;
 }
@@ -783,8 +742,8 @@ video {
   width: 1.5rem;
 }
 
-.w-8 {
-  width: 2rem;
+.w-\[16px\] {
+  width: 16px;
 }
 
 .w-\[77\.5\%\] {
@@ -800,10 +759,6 @@ video {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .max-w-\[70\%\] {
   max-width: 70%;
 }
@@ -812,8 +767,8 @@ video {
   flex: 1 1 0%;
 }
 
-.origin-center {
-  transform-origin: center;
+.origin-right {
+  transform-origin: right;
 }
 
 .-translate-x-\[1\.5px\] {
@@ -1021,11 +976,6 @@ video {
   border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
 }
 
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-
 .bg-dark-semi {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
@@ -1121,6 +1071,10 @@ video {
   --tw-gradient-to: #171717 var(--tw-gradient-to-position);
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1131,10 +1085,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .px-3 {
@@ -1513,11 +1463,6 @@ video {
 .group:hover .group-hover\:border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.group:hover .group-hover\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 768px) {
