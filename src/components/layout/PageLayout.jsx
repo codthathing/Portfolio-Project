@@ -3,7 +3,7 @@ import portfolio_logo from "../../assets/portfolio-logo.svg";
 import PageDiv from "./PageDiv";
 import PageNavigation from "./PageNavigation";
 import Footer from "./Footer";
-import { Suspense, useEffect } from "react";
+import { memo, Suspense, useEffect } from "react";
 import { usePagePosition } from "../../hooks/usePagePosition";
 
 const PageLayout = ({ animation, setAnimation }) => {
@@ -17,12 +17,12 @@ const PageLayout = ({ animation, setAnimation }) => {
       setAnimation({ ...animation, pageAnimation: false });
     }, 500);
     return () => clearTimeout(timeout);
-  }, [])
+  }, []);
 
   return (
-    <PageDiv className={"flex-col h-[100dvh] overflow-hidden"} {...((animation.pageAnimation && location === "/") && { initial: { x: initialX }, animate: { x: 0, transition: { duration: 0.35 } } } )}>
+    <PageDiv className={"flex-col h-[100dvh] overflow-hidden"} {...(animation.pageAnimation && location === "/" && { initial: { x: initialX }, animate: { x: 0, transition: { duration: 0.35 } } })}>
       <header className="relative py-4 md:py-8 md:px-12 lg:py-5 lg:px-16 2xl:px-24 flex justify-between items-center">
-        <img src={portfolio_logo} className="ml-4 md:m-0 w-10 md:w-16 lg:w-12 cursor-pointer select-none transition-all ease-linear duration-200 hover:animate-pulse" onClick={() => (location !== "/") && navigate("/")} alt="PORTFOLIO LOGO" />
+        <img src={portfolio_logo} className="ml-4 md:m-0 w-10 md:w-16 lg:w-12 cursor-pointer select-none transition-all ease-linear duration-200 hover:animate-pulse" onClick={() => location !== "/" && navigate("/")} alt="PORTFOLIO LOGO" />
         <PageNavigation />
       </header>
       <section className="z-10 flex-1 overflow-y-auto overflow-x-hidden change-scrollbar">
@@ -35,4 +35,4 @@ const PageLayout = ({ animation, setAnimation }) => {
   );
 };
 
-export default PageLayout;
+export default memo(PageLayout);

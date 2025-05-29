@@ -24,11 +24,14 @@ function App() {
     <Routes>
       <Route exact path="/" element={<PageBackground />}>
         {!hasSeenAnimation.loadAnimation ? (
-          <Route index element={
-            <PageDiv key={"splash"} className={"items-center justify-center absolute w-full h-full"}>
-              <HomeName name={"HI"} />
-            </PageDiv>
-          }/>
+          <Route
+            index
+            element={
+              <PageDiv key={"splash"} className={"items-center justify-center absolute w-full h-full"}>
+                <HomeName name={"HI"} />
+              </PageDiv>
+            }
+          />
         ) : (
           <Route element={<PageLayout animation={hasSeenAnimation} setAnimation={setHasSeenAnimation} />}>
             <Route index element={<HomePage animation={hasSeenAnimation} />} />
@@ -36,7 +39,7 @@ function App() {
             <Route path="resume" element={<ResumePage />} />
             <Route path="contact" element={<ContactPage />} />
           </Route>
-        )} 
+        )}
       </Route>
     </Routes>
   );
