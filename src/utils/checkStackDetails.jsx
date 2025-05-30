@@ -1,4 +1,4 @@
-import { SiTailwindcss, SiVercel, SiNetlify, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary } from "react-icons/si";
+import { SiTailwindcss, SiVercel, SiNetlify, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary, SiWebpack } from "react-icons/si";
 import { FaC, FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaBootstrap, FaGithub } from "react-icons/fa6";
 
 export const checkStackDetails = (stack_name) => {
@@ -28,6 +28,8 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: SiTestinglibrary, text: "React Testing Library" };
     case "framer motion":
       return { Icon: SiFramer, text: "Framer Motion" };
+    case "webpack":
+      return { Icon: SiWebpack, text: "Webpack" };
     case "supabase":
       return { Icon: SiSupabase, text: "Supabase" };
     case "java":
@@ -50,5 +52,5 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: SiNetlify, text: "Netlify" };
     default:
       break;
-  };
+  }
 };
