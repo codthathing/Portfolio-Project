@@ -2,7 +2,7 @@ const ResumeTexts = ({ resumeShown, setResumeShown }) => {
   const resumeTexts = [
     { id: 0, text: "about me" },
     { id: 1, text: "education" },
-    // { id: 2, text: "experience" },
+    { id: 2, text: "experience" },
     { id: 3, text: "skills" },
     // { id: 4, text: "achievement" },
   ];
