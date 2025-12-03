@@ -775,6 +775,10 @@ video {
   flex: 1 1 0%;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .-translate-x-\[1\.5px\] {
   --tw-translate-x: -1.5px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1528,11 +1532,11 @@ video {
     margin-top: 2rem;
   }
 
-  .md\:line-clamp-5 {
+  .md\:line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
   }
 
   .md\:block {
@@ -2090,6 +2094,10 @@ video {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:h-64 {
+    height: 16rem;
+  }
+
   .\32xl\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;

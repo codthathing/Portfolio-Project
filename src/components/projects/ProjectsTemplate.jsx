@@ -23,7 +23,7 @@ const ProjectsTemplate = ({ projectsArray, keyId, animation }) => {
               <section className="flex flex-col flex-1 p-4 md:p-6 lg:p-4">
                 <h1 className="capitalize font-bold text-base md:text-2xl lg:text-xl text-white font-Yantramanav">{project_topic}</h1>
                 <div className="my-4 md:my-6 lg:my-4 flex-1">
-                  <p className="text-xs md:text-lg lg:text-base line-clamp-4 md:line-clamp-5 text-grey-textdark font-Roboto">{project_text}</p>
+                  <p className="text-xs md:text-lg lg:text-base line-clamp-4 md:line-clamp-3 text-grey-textdark font-Roboto">{project_text}</p>
                 </div>
                 <div className="flex flex-wrap gap-x-2 gap-y-1 md:gap-x-4 md:gap-y-2 lg:gap-x-2 lg:gap-y-1 text-[8px] md:text-lg lg:text-sm">
                   <StackSpan stackArray={project_stack} className={"border-[0.5px] md:border border-grey-borderdark text-white"} />
