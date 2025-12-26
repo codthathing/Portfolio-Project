@@ -1,7 +1,7 @@
 import { memo, useEffect, useState, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { FaRobot, FaArrowRight, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 const FooterDetailsDiv = memo(() => {
   const [showInformation, setShowInformation] = useState(true);

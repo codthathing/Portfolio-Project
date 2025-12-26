@@ -2,10 +2,8 @@ import { FaArrowRight, FaMobile } from "react-icons/fa";
 import HomeName from "../components/ui/HomeName";
 import { Helmet } from "react-helmet-async";
 import { useNavigateToPage } from "../hooks/useNavigateToPage";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { usePagePosition } from "../hooks/usePagePosition";
-import { memo } from "react";
-import { useLocation } from "react-router-dom";
 
 
 const HomePage = ({ animation }) => {

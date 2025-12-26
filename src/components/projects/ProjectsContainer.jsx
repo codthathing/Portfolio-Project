@@ -2,6 +2,7 @@ import { FaBookOpen, FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa
 import StackSpan from "../common/StackSpan";
 import { useState } from "react";
 import { FaX } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 export default function ProjectsContainer({ project_image, project_topic, project_text, project_stack, project_github, project_link, id }) {
   const [showPopUp, setShowPopUp] = useState(false);
@@ -9,7 +10,7 @@ export default function ProjectsContainer({ project_image, project_topic, projec
   return (
     <>
       <div onClick={() => setShowPopUp(false)} className={`bg-grey-dark/70 backdrop-blur-sm fixed w-full h-full top-0 left-0 z-10 ${showPopUp ? "flex" : "hidden"} justify-center items-center`}>
-        <div className="flex flex-col gap-y-8 w-4/5 md:w-3/5 lg:w-[30%]">
+        <motion.div initial={{ width: 0, height: 0 }} transition={{ delay: 1, duration: 4 }} animate={{ height: "fit-content", width: "auto" }} className="flex flex-col gap-y-8 w-4/5 md:w-3/5 lg:w-[30%]">
           <div className="bg-neutral-700/50 w-10 h-10 md:w-16 md:h-16 lg:w-10 lg:h-10 rounded-full self-center flex justify-center items-center cursor-pointer" onClick={() => setShowPopUp(false)}>
             <FaX className="text-gray-400 text-xs md:text-lg lg:text-sm" />
           </div>
@@ -33,7 +34,7 @@ export default function ProjectsContainer({ project_image, project_topic, projec
               </div>
             </section>
           </main>
-        </div>
+        </motion.div>
       </div>
       <div key={id} className="flex flex-col select-none bg-grey-semidark shadow-xl rounded-2xl overflow-hidden">
         <img src={project_image} loading="lazy" fetchpriority="high" alt={project_topic.toUpperCase()} className="w-full h-36 md:h-56 lg:h-44" />

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { usePagePosition } from "../../hooks/usePagePosition";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const PageMain = ({ children, className }) => {
   const { initialX } = usePagePosition(770, 1030, 2000);

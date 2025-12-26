@@ -2,7 +2,7 @@ import { useState, useEffect, memo, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import ResumeButton from "../resume/ResumeButton";
 import { useNavigateToPage } from "../../hooks/useNavigateToPage";
-import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "motion/react";
 
 const pageNavigation = [
   { id: 0, text: "projects" },

@@ -3,6 +3,7 @@ import ContactDiv from "../components/contact/ContactDiv";
 import ContactTopicText from "../components/contact/ContactTopicText";
 import ContactInput from "../components/contact/ContactInput";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const contactInfo = [
@@ -10,11 +11,24 @@ const ContactPage = () => {
     { id: 1, topic: "Email", text: "akinwunmiolusegun277@gmail.com", type: "link" },
   ];
 
-  const [contactInput, setContactInput] = useState({ name: "", email: "", message: "" });
+  const [contactInput, setContactInput] = useState({ name: "", email: "", title: "", message: "" });
   const handleContactInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setContactInput({ ...contactInput, [name]: value });
+  };
+
+  const [contactInputStyle, setContactInputStyle] = useState({ name: "", email: "", title: "", message: "" });
+
+  const handleEmailSubmit = () => {
+    if (contactInput.name && contactInput.email && contactInput.title && contactInput.message) {
+      emailjs.send("service_f904uuc", "template_14p11hq", { name: contactInput.name, email: contactInput.email, title: contactInput.title, message: contactInput.message }).then(
+        (response) => console.log("SUCCESS!", response.status, response.text),
+        (error) => console.log("FAILED...", error),
+      );
+    } else {
+      setContactInputStyle({ name: `text-${contactInput.name ? "gray" : "red"}-400`, email: `text-${contactInput.email ? "gray" : "red"}-400`, title: `text-${contactInput.title ? "gray" : "red"}-400`, message: `text-${contactInput.message ? "gray" : "red"}-400` })
+    }
   };
 
   return (
@@ -27,7 +41,9 @@ const ContactPage = () => {
               return (
                 <div key={id}>
                   <h3 className="font-Yantramanav text-white tracking-widest mb-1 md:mb-3 lg:mb-2 text-xs md:text-2xl lg:text-lg">{topic}</h3>
-                  <a {...(type === "link" && { href: `mailto:${text}`, target: "_blank" })} className={`${type === "link" ? "transition-all ease-linear duration-200 hover:border-b hover:border-gray-400" : ""} text-gray-400 font-Roboto tracking-wider leading-loose text-[8px] md:text-xs`}>{text}</a>
+                  <a {...(type === "link" && { href: `mailto:${text}`, target: "_blank" })} className={`${type === "link" ? "transition-all ease-linear duration-200 hover:border-b hover:border-gray-400" : ""} text-gray-400 font-Roboto tracking-wider leading-loose text-[8px] md:text-xs`}>
+                    {text}
+                  </a>
                 </div>
               );
             })}
@@ -37,11 +53,14 @@ const ContactPage = () => {
           <ContactTopicText topic={"contact form"} text={"Send a direct message"} />
           <form>
             <div className="flex flex-col gap-y-2 md:gap-y-5 lg:gap-y-4">
-              <ContactInput type={"text"} name={"name"} value={contactInput.name} onChange={handleContactInput} placeholder={"Your name"} />
-              <ContactInput type={"email"} name={"email"} value={contactInput.email} onChange={handleContactInput} placeholder={"Your email"} />
-              <textarea name="message" value={contactInput.message} onChange={handleContactInput} placeholder="Messaage" required className="text-gray-400 text-[8px] md:text-sm lg:text-xs py-2 lg:py-3 font-Roboto w-full border-b border-neutral-700 bg-transparent placeholder:text-gray-400 tracking-wider focus:border-neutral-500 focus:outline-none" id="" />
+              <ContactInput type={"text"} name={"name"} value={contactInput.name} onChange={handleContactInput} placeholder={"Your Name"} inputStyle={contactInputStyle.name} />
+              <ContactInput type={"email"} name={"email"} value={contactInput.email} onChange={handleContactInput} placeholder={"Your Email"} inputStyle={contactInputStyle.email} />
+              <ContactInput type={"text"} name={"title"} value={contactInput.title} onChange={handleContactInput} placeholder={"Email Title"} inputStyle={contactInputStyle.title} />
+              <textarea name="message" value={contactInput.message} onChange={handleContactInput} placeholder="Message" required className={`text-gray-400 text-[8px] md:text-sm lg:text-xs py-2 lg:py-3 font-Roboto w-full border-b border-neutral-700 bg-transparent placeholder:${contactInputStyle.message} resize-none tracking-wider focus:border-neutral-500 focus:outline-none`} id="" />
             </div>
-            <button type="button" className="font-Yantramanav mt-6 md:mt-10 lg:mt-8 py-2 px-4 md:px-5 md:py-3 text-xs md:text-lg lg:text-base rounded-lg text-white bg-zinc-800 bg-opacity-30 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0">SEND MESSAGE</button>
+            <button type="button" onClick={handleEmailSubmit} className="font-Yantramanav mt-6 md:mt-10 lg:mt-8 py-2 px-4 md:px-5 md:py-3 text-xs md:text-lg lg:text-base rounded-lg text-white bg-zinc-800 bg-opacity-30 uppercase tracking-wider shadow-2xl transition-all hover:-translate-y-1 active:translate-y-1 disabled:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0">
+              SEND MESSAGE
+            </button>
           </form>
         </ContactDiv>
       </main>
