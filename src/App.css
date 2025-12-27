@@ -15,6 +15,11 @@
   display: none;
 }
 
+.shadow-inset {
+  box-shadow: 0 0 0 1000px rgba(23, 23, 23, 0.3) inset !important;
+}
+
+
 @media all and (min-width: 1024px) {
   .change-scrollbar::-webkit-scrollbar {
     display: block;

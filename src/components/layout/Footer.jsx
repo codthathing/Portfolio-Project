@@ -12,6 +12,7 @@ const FooterDetailsDiv = memo(() => {
       { id: 2, text: "Click on the robot to expand/collapse" },
       { id: 3, text: "Navigate to home page using the icon at the top-left" },
       { id: 4, text: "Click on the email address to send a direct email" },
+      { id: 5, text: "Click on the BOOK icon to get details about a project" },
     ],
     text: "Welcome to my portfolio!",
   });
