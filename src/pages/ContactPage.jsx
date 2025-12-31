@@ -5,6 +5,7 @@ import ContactInput from "../components/contact/ContactInput";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaX } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 const ContactPage = () => {
   const contactInfo = [
@@ -39,12 +40,12 @@ const ContactPage = () => {
   return (
     <>
       {showPopUp && (
-        <main className="fixed w-full top-0 right-0 md:w-fit md:top-6 md:right-6 lg:top-4 lg:right-10">
+        <motion.main initial={{ x: 500 }} animate={{ x: 0, transition: { duration: 1, damping: 9, type: "spring", ease: "easeInOut" } }} className="fixed w-full top-0 right-0 md:w-fit md:top-6 md:right-6 lg:top-4 lg:right-10">
           <div className="relative py-6 md:py-8 md:px-20 lg:py-6 bg-neutral-800/50 backdrop-blur-sm text-gray-400 md:rounded-tl-3xl md:rounded-br-3xl">
             <p className="text-center text-xs md:text-xl lg:text-base">Message Sent!</p>
             <FaX className="absolute top-3 right-3 md:top-4 md:right-4 lg:top-2 lg:right-2 text-white text-xs md:text-base cursor-pointer" onClick={() => setShowPopUp(false)} />
           </div>
-        </main>
+        </motion.main>
       )}
       <PageMain className={"md:pt-44 md:flex md:justify-center md:items-center md:h-full select-none"}>
         <main className="grid py-10 px-4 gap-y-4 md:py-10 md:gap-y-10 lg:gap-y-0 lg:grid-cols-2 md:w-2/4 lg:w-3/5 lg:gap-x-4">

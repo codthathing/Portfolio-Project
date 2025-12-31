@@ -4,7 +4,6 @@
 
 #root {
   @apply overflow-hidden;
-  /* overflow: hidden */
 }
 
 .main-center {
@@ -19,8 +18,27 @@
   box-shadow: 0 0 0 1000px rgba(23, 23, 23, 0.3) inset !important;
 }
 
+@media all and (max-width: 767px) {
+  :root {
+    --width: 80%;
+    --height: 75%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --width: 60%;
+    --height: 65%;
+  }  
+}
+
 
 @media all and (min-width: 1024px) {
+  :root {
+    --width: 30%;
+    --height: 75%;
+  }
+
   .change-scrollbar::-webkit-scrollbar {
     display: block;
     width: 7.5px;
