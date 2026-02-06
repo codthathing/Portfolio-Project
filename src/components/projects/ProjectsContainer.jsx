@@ -11,7 +11,7 @@ export default function ProjectsContainer({ project_image, project_topic, projec
     <>
       {/* <AnimatePresence> */}
         {showPopUp && (
-          <div onClick={() => setShowPopUp(false)} className="bg-grey-dark/70 backdrop-blur-sm fixed w-full h-full top-0 left-0 z-10 flex justify-center items-center">
+          <div className="bg-grey-dark/70 backdrop-blur-sm fixed w-full h-full top-0 left-0 z-10 flex justify-center items-center">
             <div className="flex flex-col gap-y-8 w-4/5 md:w-3/5 lg:w-[30%] overflow-hidden">
             {/* <motion.div initial={{ height: 0, width: 0 }} animate={{ height: "var(--height)", width: "var(--width)", transition: { duration: 1, type: "spring", ease: "easeInOut", stiffness: 100, damping: 10 } }} className="flex flex-col gap-y-8 overflow-hidden"> */}
               <div className="bg-neutral-700/50 w-10 h-10 md:w-16 md:h-16 lg:w-10 lg:h-10 rounded-full self-center flex justify-center items-center cursor-pointer" onClick={() => setShowPopUp(false)}>
