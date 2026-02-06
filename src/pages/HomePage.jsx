@@ -23,7 +23,7 @@ const HomePage = ({ animation }) => {
       <div className="uppercase">
         <p className="font-Roboto text-gray-400 tracking-widest text-xs md:text-base lg:text-sm">hey, i'm</p>
         <HomeName name={"OLUWASEGUN"} className={"my-2 md:my-4"} />
-        <p className="font-Yantramanav text-gray-400 tracking-wider text-sm md:text-xl lg:text-base text-right">{"<a frontend engineer />"}</p>
+        <p className="font-Yantramanav text-gray-400 tracking-wider text-sm md:text-xl lg:text-base text-right">a frontend engineer</p>
         <div className="flex items-center justify-between mt-5 md:mt-12 lg:mt-14 text-xs md:text-base lg:text-sm">
           {fronPageLinks.map(({ id, Icon, text, destination }) => {
             return (

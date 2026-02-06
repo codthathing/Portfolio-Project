@@ -9,20 +9,28 @@ export default function ProjectsContainer({ project_image, project_topic, projec
 
   return (
     <>
-      <AnimatePresence>
+      {/* <AnimatePresence> */}
         {showPopUp && (
           <div onClick={() => setShowPopUp(false)} className="bg-grey-dark/70 backdrop-blur-sm fixed w-full h-full top-0 left-0 z-10 flex justify-center items-center">
-            <motion.div initial={{ height: 0, width: 0 }} animate={{ height: "var(--height)", width: "var(--width)", transition: { duration: 1, type: "spring", ease: "easeInOut", stiffness: 100, damping: 10 } }} className="flex flex-col gap-y-8 overflow-hidden">
+            <div className="flex flex-col gap-y-8 w-4/5 md:w-3/5 lg:w-[30%] overflow-hidden">
+            {/* <motion.div initial={{ height: 0, width: 0 }} animate={{ height: "var(--height)", width: "var(--width)", transition: { duration: 1, type: "spring", ease: "easeInOut", stiffness: 100, damping: 10 } }} className="flex flex-col gap-y-8 overflow-hidden"> */}
               <div className="bg-neutral-700/50 w-10 h-10 md:w-16 md:h-16 lg:w-10 lg:h-10 rounded-full self-center flex justify-center items-center cursor-pointer" onClick={() => setShowPopUp(false)}>
                 <FaX className="text-gray-400 text-xs md:text-lg lg:text-sm" />
               </div>
               <main className="bg-neutral-900 overflow-hidden w-full group border border-[rgb(60_60_60)] hover:border-[rgb(100_100_100)] transition-all duration-500">
                 <img src={project_image} alt={project_topic.toUpperCase()} className="w-full h-48 md:h-72 lg:h-60 object-cover transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-40 opacity-60" />
                 <section className="flex flex-col flex-1 p-4 md:py-8 md:px-6 lg:px-4 lg:py-6">
-                  <h1 className=" border-t border-[rgb(60_60_60)] group-hover:border-[rgb(100_100_100)] transition-all duration-500 pt-3 md:pt-4 lg:pt-4 capitalize font-bold text-base md:text-2xl lg:text-xl text-white font-Yantramanav">{`<${project_topic} />`}</h1>
+                  <h1 className=" border-t border-[rgb(60_60_60)] group-hover:border-[rgb(100_100_100)] transition-all duration-500 pt-3 md:pt-4 lg:pt-4 capitalize font-bold text-base md:text-2xl lg:text-xl text-white font-Yantramanav">{project_topic}</h1>
                   <div className="mt-0 mb-3 md:mt-3 md:mb-4 lg:mb-4 lg:mt-1 flex-1">
                     <p className="text-xs md:text-lg lg:text-base text-grey-textdark font-Roboto">{project_text}</p>
                   </div>
+                  {/* State that the user is live and used by real users */}
+                  {/* Features: 
+                    - My role and contribution
+                    - Core features of the app
+                    - Key challenges faced, solutions, and outcome of the solution
+                    - Show your code (Can be github button)
+                  */}
                   <div className="border-t border-[rgb(60_60_60)] pt-2.5 md:pt-6 lg:pt-4 flex flex-wrap gap-x-2 gap-y-1 md:gap-x-4 md:gap-y-2 lg:gap-x-2 lg:gap-y-1 text-[8px] md:text-lg lg:text-sm">
                     <StackSpan stackArray={project_stack} className={"border-[0.5px] md:border border-[rgb(60_60_60)] text-white"} />
                   </div>
@@ -36,19 +44,20 @@ export default function ProjectsContainer({ project_image, project_topic, projec
                   </div>
                 </section>
               </main>
-            </motion.div>
+            </div>
+            {/* </motion.div> */}
           </div>
         )}
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
       <div key={id} className="flex flex-col select-none bg-grey-semidark shadow-xl rounded-2xl overflow-hidden">
         <img src={project_image} loading="lazy" fetchpriority="high" alt={project_topic.toUpperCase()} className="w-full h-36 md:h-56 lg:h-44 opacity-60" />
         <section className="flex flex-col flex-1 p-4 md:p-6 lg:px-4 lg:py-6">
           <div className="flex justify-between items-center text-white">
-            <h1 className="capitalize font-bold text-base md:text-2xl lg:text-xl font-Yantramanav">{`<${project_topic} />`}</h1>
+            <h1 className="capitalize font-bold text-base md:text-2xl lg:text-xl font-Yantramanav">{project_topic}</h1>
             <FaBookOpen className="transition-all ease-linear duration-200 hover:scale-125 cursor-pointer" onClick={() => setShowPopUp(true)} />
           </div>
           <div className="my-4 md:my-6 lg:my-4 flex-1">
-            <p className="text-xs md:text-lg lg:text-base line-clamp-4 md:line-clamp-3 text-grey-textdark font-Roboto">{project_text}</p>
+            <p className="text-xs md:text-lg lg:text-base line-clamp-4 md:line-clamp-3 lg:line-clamp-2 text-grey-textdark font-Roboto">{project_text}</p>
           </div>
           <div className="flex flex-wrap gap-x-2 gap-y-1 md:gap-x-4 md:gap-y-2 lg:gap-x-2 lg:gap-y-1 text-[8px] md:text-lg lg:text-sm">
             <StackSpan stackArray={project_stack} className={"border-[0.5px] md:border border-grey-borderdark text-white rounded-full"} />

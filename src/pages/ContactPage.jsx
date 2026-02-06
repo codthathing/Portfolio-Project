@@ -55,7 +55,7 @@ const ContactPage = () => {
               {contactInfo.map(({ id, topic, text, type }) => {
                 return (
                   <div key={id}>
-                    <h3 className="font-Yantramanav text-white tracking-widest mb-1 md:mb-3 lg:mb-2 text-xs md:text-2xl lg:text-lg">{`<${topic} />`}</h3>
+                    <h3 className="font-Yantramanav text-white tracking-widest mb-1 md:mb-3 lg:mb-2 text-xs md:text-2xl lg:text-lg">{topic}</h3>
                     <a {...(type === "link" && { href: `mailto:${text}`, target: "_blank" })} className={`${type === "link" ? "transition-all ease-linear duration-200 hover:border-b hover:border-gray-400" : ""} text-gray-400 font-Roboto tracking-wider leading-loose text-[8px] md:text-xs`}>
                       {text}
                     </a>
