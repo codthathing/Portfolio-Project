@@ -10,7 +10,7 @@
   --color-grey-textdark: #858585;
   --color-grey-borderdark: #242424;
   --color-grey-bgdark: #27272c;
-  
+
   --color-primary: #1d4ed8;
 
   --font-family-roboto: Roboto, sans-serif;
@@ -24,7 +24,7 @@
   --width-65%: 65%;
   --width-60%: 60%;
   --width-77.5%: 77.5%;
-  
+
   --translate-1.5px: 1.5px;
 }
 
@@ -37,7 +37,11 @@
 }
 
 .shadow-inset {
-  box-shadow: 0 0 0 1000px #1717174d inset !important;
+  box-shadow: 0 0 0px 500px #171717 inset;
+}
+
+.shadow-inset:-webkit-autofill {
+  -webkit-text-fill-color: #9CA3AF;
 }
 
 @media all and (max-width: 767px) {
@@ -51,7 +55,7 @@
   :root {
     --width: 60%;
     --height: 65%;
-  }  
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -64,11 +68,11 @@
     display: block;
     width: 7.5px;
   }
-  
+
   .change-scrollbar::-webkit-scrollbar-track {
     background-color: #171717;
   }
-  
+
   .change-scrollbar::-webkit-scrollbar-thumb {
     border-radius: 1.5rem;
     background-color: #524c4c;
