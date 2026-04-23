@@ -18,7 +18,7 @@ const HomePage = ({ animation }) => {
     <motion.main {...(!animation.pageAnimation && { initial: { x: initialX }, animate: { x: 0, transition: { type: "spring", duration: 0.5, damping: 15 } } } )} className="main-center">
       <Helmet>
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://codthathing-dev.vercel.app" />
+        <link rel="canonical" href="https://codthathing.vercel.app" />
       </Helmet>
       <div className="uppercase">
         <p className="font-Roboto text-gray-400 tracking-widest text-xs md:text-base lg:text-sm">hey, i'm</p>
