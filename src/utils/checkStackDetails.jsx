@@ -1,5 +1,5 @@
 import { SiTailwindcss, SiVercel, SiNetlify, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary, SiWebpack } from "react-icons/si";
-import { FaC, FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaBootstrap, FaGithub } from "react-icons/fa6";
+import { FaC, FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaBootstrap, FaGithub, FaPhp } from "react-icons/fa6";
 
 export const checkStackDetails = (stack_name) => {
   const stack_name_lower = stack_name.toLowerCase();
@@ -38,6 +38,8 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: FaPython, text: "Python" };
     case "c":
       return { Icon: FaC, text: "" };
+    case "php":
+      return { Icon: FaPhp, text: "" };
     case "localstorage":
       return { Icon: FaDatabase, text: "localStorage" };
     case "index db":

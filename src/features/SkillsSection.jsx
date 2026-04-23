@@ -32,7 +32,12 @@ const SkillsSection = () => {
     {
       id: 3,
       topic: "other programming languages",
-      skills: [{ id: 0, stack_name: "python" }, { id: 1, stack_name: "c" }, { id: 0, stack_name: "java" }],
+      skills: [
+        { id: 0, stack_name: "python" },
+        { id: 1, stack_name: "c" },
+        { id: 2, stack_name: "java" },
+        { id: 3, stack_name: "php" },
+      ],
     },
     {
       id: 4,
