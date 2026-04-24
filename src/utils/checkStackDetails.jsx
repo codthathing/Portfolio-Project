@@ -39,7 +39,7 @@ export const checkStackDetails = (stack_name) => {
     case "c":
       return { Icon: FaC, text: "" };
     case "php":
-      return { Icon: FaPhp, text: "" };
+      return { Icon: FaPhp, text: "PHP" };
     case "localstorage":
       return { Icon: FaDatabase, text: "localStorage" };
     case "index db":
