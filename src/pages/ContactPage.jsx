@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 const ContactPage = () => {
   const contactInfo = [
     { id: 0, topic: "Address", text: "Lagos, Nigeria", type: "text" },
-    { id: 1, topic: "Email", text: "akinwunmiolusegun277@gmail.com", type: "link" },
+    { id: 1, topic: "Email", text: "codthathing.dev@yahoo.com", type: "link" },
   ];
 
   const [showPopUp, setShowPopUp] = useState({ show: false, text: "Message Sent!" });

@@ -1,4 +1,4 @@
-import { SiDotnet, SiAmazons3, SiPostgresql, SiTailwindcss, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary, SiExpress, SiMongodb, SiFastapi, SiSqlalchemy, SiSqlite, SiJsonwebtokens, SiSpringboot, SiSpringsecurity, SiApachemaven, SiSocketdotio, SiHibernate } from "react-icons/si";
+import { SiDotnet, SiAmazons3, SiPostgresql, SiTailwindcss, SiRedux, SiNextdotjs, SiTypescript, SiGit, SiSupabase, SiFramer, SiJest, SiTestinglibrary, SiExpress, SiMongodb, SiFastapi, SiSqlalchemy, SiSqlite, SiJsonwebtokens, SiSpringboot, SiSpringsecurity, SiApachemaven, SiSocketdotio, SiHibernate, SiMysql } from "react-icons/si";
 import { FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaGithub, FaPhp, FaNodeJs } from "react-icons/fa6";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -35,6 +35,8 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: SiSupabase, text: "Supabase" };
     case "nodejs":
       return { Icon: FaNodeJs, text: "NodeJs" };
+    case "mysql":
+      return { Icon: SiMysql, text: "MySQL" };
     case "java":
       return { Icon: FaJava, text: "Java" };
     case "python":

@@ -15,8 +15,8 @@ const ProjectsTemplate = ({ projectsArray, keyId, animation }) => {
   return (
     <AnimatePresence mode="wait">
       <motion.main key={keyId} variants={mainVariants} initial={animation.initial} exit={animation.exit} animate={{ x: 0 }} transition="transition" className="grid place-content-center md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 lg:gap-x-6">
-        {projectsArray.map(({ id, project_image, project_topic, project_text, project_github, project_link, project_stack }) => {
-          return <ProjectsContainer key={id} id={id} project_image={project_image} project_topic={project_topic} project_text={project_text} project_github={project_github} project_link={project_link} project_stack={project_stack} />;
+        {projectsArray.map(({ id, project_image, project_topic, project_text, project_description, project_status, project_architecture, project_features, project_link, project_github, project_stack, project_upcoming }) => {
+          return <ProjectsContainer key={id} id={id} project_image={project_image} project_topic={project_topic} project_text={project_text} project_description={project_description} project_status={project_status} project_architecture={project_architecture} project_features={project_features} project_github={project_github} project_link={project_link} project_stack={project_stack} project_upcoming={project_upcoming} />;
         })}
       </motion.main>
     </AnimatePresence>
