@@ -62,43 +62,45 @@ const ProjectsPage = () => {
       project_link: "soars-app.vercel.app",
       project_text: "SOARS is a personal library for saving, organizing, archiving, and sharing links, files, and notes, all in one clean, searchable workspace.",
       project_description: "SOARS brings everything people usually scatter across bookmarks, chat messages, and download folders into one place. Users can save a link, upload a file, or write a note, then group items into collections, tag them, favorite them, archive them, or share them through a public link. I designed the full system first (mobile, tablet, and desktop frames with a defined palette, type scale, and component style) and am building it in stages: the interface for the sub-routes is largely built, and I'm connecting it to the authentication, API, and storage layers.",
-      project_status: "In development: UI largely complete, backend integration in progress.",
+      project_status: "In development: Core resource management and AI-powered features implemented; transitioning from a mock API and local storage to production-ready infrastructure.",
       // TODO(you): adjust the status line to what is actually connected right now
       // (for example "Supabase auth working" if it is).
       project_architecture: [
-        "Current: Next.js (TypeScript) frontend deployed on Vercel",
-        "Current: Live demo runs against a mock API",
-        "Planned: Supabase handles sign-up, login, and sessions",
-        "Planned: ASP.NET Core (C#) API handles resource logic: collections, tags, links, notes, sharing",
-        "Planned: PostgreSQL stores users' resources and their relationships",
-        "Planned: AWS S3 stores uploaded files"
+        "Frontend: Next.js App Router with TypeScript, deployed on Vercel",
+        "Backend: Next.js Route Handlers handle authentication checks, resource operations, validation, and AI-related requests",
+        "Development database: JSON Server with db.json for mock API data",
+        "File storage: Local filesystem storage for uploaded PDFs during development",
+        "AI development: Gemma 4 (E2B) running locally through Ollama",
+        "AI production: Gemini API as the managed AI provider",
+        "Planned: Supabase Authentication for user registration, login, and session management",
+        "Planned: PostgreSQL for persistent storage of users' resources and their relationships",
+        "Planned: AWS S3 for scalable file and document storage"
       ],
       project_features: [
-        { id: 0, topic: "Save anything", description: "Add links, upload files, or write notes from one flow, with an auto-generated preview (title, thumbnail, favicon)." },
-        { id: 1, topic: "Collections", description: "Group related resources into named folders." },
-        { id: 2, topic: "Tags", description: "Create, manage, and filter resources by tag." },
-        { id: 3, topic: "Global search", description: "Search across every saved link, file, and note." },
-        { id: 4, topic: "Favorites and bookmarks", description: "Keep the resources you return to most within reach." },
-        { id: 5, topic: "Archive and trash", description: "Clear clutter without losing anything permanently; trashed items can be restored." },
-        { id: 6, topic: "Sharing", description: "Copy a link, share externally, or generate a public link to a collection anyone can view without an account." },
-        { id: 7, topic: "Bulk actions", description: "Multi-select to move, tag, archive, or delete several items at once." },
-        { id: 8, topic: "Storage and plans", description: "Quota tracking with a plan comparison view." },
-        { id: 9, topic: "Notifications and settings", description: "Account preferences and activity alerts." },
-        { id: 10, topic: "Responsive design", description: "Designed at mobile, tablet, and desktop breakpoints." }
+        { id: 0, topic: "Unified resource management", description: "Save links, upload PDF files, and create notes in one workspace."},
+        { id: 1, topic: "AI-powered resource analysis", description: "Uses Gemma 4 to generate resource summaries, extract relevant tags, and recommend suitable collections when saving links, files, and notes."},
+        { id: 2, topic: "AI resource assistant", description: "Ask questions in natural language and retrieve relevant resources from your personal library, with contextual answers and links to the original resources."},
+        { id: 3, topic: "Collections", description: "Organize related links, files, and notes into named collections."},
+        { id: 4, topic: "Tags", description: "Categorize resources with tags and filter your library by specific topics."},
+        { id: 5, topic: "Global search", description: "Search across saved links, files, and notes using resource titles, summaries, URLs, and tags."},
+        { id: 6, topic: "Favorites and bookmarks", description: "Mark important resources for quick access."},
+        { id: 7, topic: "Archive and trash", description: "Clear clutter without losing anything permanently; trashed items can be restored." },
+        { id: 8, topic: "Sharing", description: "Copy a link, share externally, or generate a public link to a collection anyone can view without an account." },
+        { id: 9, topic: "Bulk actions", description: "Multi-select to move, tag, archive, or delete several items at once." },
+        { id: 10, topic: "Resource management", description: "View saved resources, inspect their details, and open or download uploaded PDF documents."},
       ],
       project_stack: [
-        { id: 0, stack_name: "nextjs", stack_use: "App Router gives file-based routing for the many sub-routes (collections, tags, archive, trash), and server rendering keeps pages fast and shareable, which matters for public collection links." },
-        { id: 1, stack_name: "tailwind", stack_use: "Utility classes map directly to the design system's spacing, color, and type tokens, and make the mobile, tablet, and desktop layouts straightforward to build." },
-        { id: 2, stack_name: "motion", stack_use: "Page transitions, modals, and list animations so actions like archiving or restoring items feel clear instead of abrupt." },
-        { id: 3, stack_name: "typescript", stack_use: "Typed resource, collection, and tag models catch mismatches between the UI and the API at build time instead of at runtime." },
-        { id: 4, stack_name: "redux", stack_use: "Resources are touched from many screens (favorite on one page, see it update on another). Redux keeps that shared state in one predictable store instead of passing props through layers." },
-        { id: 5, stack_name: "csharp", stack_use: "Planned: The language of the backend, chosen for its strong typing and mature tooling for building structured APIs." },
-        { id: 6, stack_name: "aspdotnet", stack_use: "Planned: ASP.NET Core exposes the REST API between the frontend and the database, handling validation, resource rules, and sharing logic in one place." },
-        { id: 7, stack_name: "supabase", stack_use: "Planned: Handles authentication (sign-up, login, sessions) so I don't hand-roll password storage and token handling, which are easy to get wrong." },
-        { id: 8, stack_name: "postgresql", stack_use: "Planned: Relational database fits the data well: users, resources, collections, and tags are connected by many-to-many relationships that SQL joins handle cleanly." },
-        { id: 9, stack_name: "aws3", stack_use: "Planned: Object storage for uploaded files, keeping large binaries out of the database and making storage usage easy to measure for quotas." }
+        { id: 0, stack_name: "nextjs", stack_use: "Next.js App Router powers the frontend and server-side Route Handlers, providing the foundation for resource management, authentication checks, and AI integrations." },
+        { id: 1, stack_name: "typescript", stack_use: "Provides type safety across resource models, API responses, application logic, and shared components." },
+        { id: 2, stack_name: "tailwind", stack_use: "Utility-first styling makes it easier to maintain a consistent design system and build responsive layouts." },
+        { id: 3, stack_name: "motion", stack_use: "Powers interface animations, transitions, and interactive experiences." },
+        { id: 4, stack_name: "redux", stack_use: "Redux Toolkit manages shared application state, particularly resources that are accessed and updated across different screens." },
+        { id: 5, stack_name: "gemini", stack_use: "Managed AI provider for production, allowing SOARS to access hosted models through an API without requiring users to run AI models locally." },
+        { id: 6, stack_name: "supabase", stack_use: "Planned authentication provider for user registration, login, and session management." },
+        { id: 7, stack_name: "postgresql", stack_use: "Planned relational database for persistent storage of users, resources, collections, tags, and their relationships." },
+        { id: 8, stack_name: "aws3", stack_use: "Planned object storage for uploaded documents, separating file storage from application data." }
       ],
-      project_upcoming: "Connecting the interface to the live API, wiring file uploads to S3, finishing public collection sharing, and adding storage quota enforcement."
+      project_upcoming: "Replace the development mock API with persistent production infrastructure, integrate Supabase authentication and PostgreSQL, migrate PDF uploads to AWS S3, and implement public collection sharing, archive and trash management, and storage quotas."
       // TODO(you): replace with your real next steps in your order of priority.
     },
     {

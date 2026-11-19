@@ -3,6 +3,7 @@ import { FaJava, FaJs, FaDatabase, FaCss3, FaHtml5, FaReact, FaPython, FaGithub,
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiGreensock } from "react-icons/si";
+import { SiGooglegemini } from "react-icons/si";
 
 export const checkStackDetails = (stack_name) => {
   const stack_name_lower = stack_name.toLowerCase();
@@ -53,6 +54,8 @@ export const checkStackDetails = (stack_name) => {
       return { Icon: FaDatabase, text: "DexieJs" };
     case "postgresql":
       return { Icon: SiPostgresql, text: "PostgreSQL" };
+    case "gemini":
+      return { Icon: SiGooglegemini, text: "Gemini AI" };
     case "git":
       return { Icon: SiGit, text: "Git" };
     case "github":
