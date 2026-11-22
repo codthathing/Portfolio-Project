@@ -28,11 +28,11 @@ export const useRenderProjects = (featuredProjects, setAnimation) => {
   const [newPaginationIndex, setNewPaginationIndex] = useState(0);
   const changeProjectsShownNext = () => {
     setAnimation({ initial: "rightInitial", exit: "rightExit" });
-    setTimeout(() => setNewPaginationIndex((prevState) => (prevState < paginationShown - 1 ? prevState + 1 : 0)), 1);
+    setTimeout(() => setNewPaginationIndex((prevState) => (prevState > 0 ? prevState - 1 : paginationShown - 1)), 1);
   };
   const changeProjectsShownPrev = () => {
     setAnimation({ initial: "rightExit", exit: "rightInitial" });
-    setTimeout(() => setNewPaginationIndex((prevState) => (prevState > 0 ? prevState - 1 : paginationShown - 1)), 1);
+    setTimeout(() => setNewPaginationIndex((prevState) => (prevState < paginationShown - 1 ? prevState + 1 : 0)), 1);
   };
 
   const [paginationLength, setPaginationLength] = useState([]);
